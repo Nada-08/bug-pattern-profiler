@@ -1,0 +1,9 @@
+pyproject.toml
+bug_pattern_profiler.egg-info/PKG-INFO
+bug_pattern_profiler.egg-info/SOURCES.txt
+bug_pattern_profiler.egg-info/dependency_links.txt
+bug_pattern_profiler.egg-info/requires.txt
+bug_pattern_profiler.egg-info/top_level.txt
+packages/__init__.py
+packages/common/__init__.py
+packages/ingestions/__init__.py
