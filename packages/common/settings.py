@@ -15,4 +15,7 @@ class Settings(BaseModel):
     nvd_api_key: str | None = os.getenv("NVD_API_KEY")
     request_timeout_seconds: int = 30
 
+    pinecone_api_key: str | None = os.getenv("PINECONE_API_KEY")
+    pinecone_index_name: str = os.getenv("PINECONE_INDEX_NAME", "bug-pattern-profiler")
+
 settings = Settings()

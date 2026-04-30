@@ -19,3 +19,12 @@ def save_jsonl(path: Path, records: Iterable[dict]) -> None:
     with path.open("w", encoding="utf-8") as f:
         for record in records:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+def load_jsonl(path: Path) -> list[dict]:
+    records = []
+
+    with path.open("r", encoding="utf-8") as f:
+        for line in f:
+            records.append(json.loads(line))
+
+        return records
