@@ -17,5 +17,17 @@ class Settings(BaseModel):
 
     pinecone_api_key: str | None = os.getenv("PINECONE_API_KEY")
     pinecone_index_name: str = os.getenv("PINECONE_INDEX_NAME", "bug-pattern-profiler")
+    
+    openrouter_api_key: str | None = os.getenv("OPENROUTER_API_KEY")
+    openrouter_model: str = os.getenv(
+        "OPENROUTER_MODEL",
+        "qwen/qwen3-next-80b-a3b-instruct:free"
+    )
+
+    groq_api_key: str | None = os.getenv("GROQ_API_KEY")
+    groq_model: str = os.getenv(
+        "GROQ_MODEL",
+        "llama3-70b-8192"
+    )
 
 settings = Settings()

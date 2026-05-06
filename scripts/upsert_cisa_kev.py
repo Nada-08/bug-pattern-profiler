@@ -1,6 +1,5 @@
 from pathlib import Path
-from time import perf_counter
-from datetime import timedelta
+from datetime import datetime
 
 from packages.ingestion.storage.local_store import load_jsonl
 from packages.retrieval.embedder import Embedder
@@ -9,28 +8,21 @@ from packages.retrieval.vector_store import PineconeVectorStore
 
 BATCH_SIZE = 100
 
-def format_duration(seconds: float) -> str:
-    return str(timedelta(seconds=round(seconds, 2)))
-
-
-# Start overall timer
-overall_start = perf_counter()
-
-
-chunk_path = Path("data/chunks/cisa_kev/cisa_kev.chunks.jsonl")
+chunk_path = Path("data/chunks/fused/kev_nvd.chunks.jsonl")
 
 chunks = load_jsonl(chunk_path)
 
 embedder = Embedder()
 store = PineconeVectorStore()
 
-print("Total chunks:", len(chunks))
+print("Total NVD chunks:", len(chunks))
+
+start_time = datetime.now()
 
 for i in range(0, len(chunks), BATCH_SIZE):
-    batch_start = perf_counter()
+    batch_start = datetime.now()
 
     batch = chunks[i:i + BATCH_SIZE]
-
     texts = [chunk["text"] for chunk in batch]
 
     embeddings = embedder.embed_batch(texts)
@@ -48,29 +40,25 @@ for i in range(0, len(chunks), BATCH_SIZE):
                 "title": chunk["title"],
                 "text": chunk["text"],
                 "cve_id": chunk["cve_id"],
-                "vendor": chunk["vendor"],
-                "product": chunk["product"],
-                "published_at": chunk["published_at"],
-                "tags": chunk["tags"],
+                "cwe_ids": chunk.get("cwe_ids", []),
+                "vendor": chunk.get("vendor", []),
+                "product": chunk.get("product", []),
+                "severity": chunk.get("severity"),
+                "published_at": chunk.get("published_at"),
+                "tags": chunk.get("tags", []),
             }
         })
 
-    store.upsert_vectors(vectors)
+    store.upsert_vectors(vectors, namespace="fused")
 
-    batch_end = perf_counter()
-    batch_duration = batch_end - batch_start
-
+    batch_end = datetime.now()
     print(
         f"Uploaded batch {i // BATCH_SIZE + 1} "
-        f"({len(vectors)} vectors) "
-        f"in {format_duration(batch_duration)}"
+        f"({len(vectors)} vectors) in {batch_end - batch_start}"
     )
 
-overall_end = perf_counter()
-overall_duration = overall_end - overall_start
+end_time = datetime.now()
 
 print()
-print("Finished uploading all KEV chunks.")
-print(f"Total execution time: {format_duration(overall_duration)}")
-print(f"Started at: {overall_start:.4f}")
-print(f"Finished at: {overall_end:.4f}")
+print("Finished uploading all NVD chunks.")
+print("Total execution time:", end_time - start_time)

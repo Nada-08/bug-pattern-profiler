@@ -20,6 +20,14 @@ class NormalizedDocument(BaseModel):
     # useful for filtering and ranking later
     severity: str | None = None
     cvss_score: float | None = None
+    cvss_version: str | None = None
+    
+    attack_vector: str | None = None
+    attack_complexity: str | None = None
+    privileges_required: str | None = None
+    
+    exploitability_score: float | None = None
+    impact_score: float | None = None
 
     # dates from the source
     published_at: str | None = None

@@ -6,12 +6,13 @@ class SearchService:
         self.embedder = Embedder()
         self.vector_store = PineconeVectorStore()
 
-    def search(self, query: str, top_k: int = 5) -> list[dict]:
+    def search(self, query: str, top_k: int = 5, namespace: str | None = None) -> list[dict]:
         query_embedding = self.embedder.embed_text(query)
 
         results = self.vector_store.query(
             vector=query_embedding,
-            top_k=top_k
+            top_k=top_k,
+            namespace=namespace
         )
 
         matches = []
