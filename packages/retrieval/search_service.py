@@ -33,6 +33,14 @@ class SearchService:
                 "product": metadata.get("product"),
                 "published_at": metadata.get("published_at"),
                 "tags": metadata.get("tags"),
+                "severity": metadata.get("severity"),
+                "cvss_score": metadata.get("cvss_score"),
+                "cwe_ids": metadata.get("cwe_ids"),
+                "attack_vector": metadata.get("attack_vector"),
+                "attack_complexity": metadata.get("attack_complexity"),
+                "privileges_required": metadata.get("privileges_required"),
+                "exploitability_score": metadata.get("exploitability_score"),
+                "impact_score": metadata.get("impact_score"),
             })
             
         return matches

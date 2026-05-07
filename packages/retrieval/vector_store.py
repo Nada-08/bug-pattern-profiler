@@ -60,3 +60,6 @@ class PineconeVectorStore:
             include_metadata=True,
             namespace=namespace
         )
+    
+    def delete_namespace(self, namespace: str):
+        self.index.delete(delete_all=True, namespace=namespace)

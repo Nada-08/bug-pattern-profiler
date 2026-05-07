@@ -9,6 +9,8 @@ result = rag.answer(
     namespace="fused"
 )
 
+print(result["sources"][0])
+
 print("ANSWER:")
 print(result["answer"])
 

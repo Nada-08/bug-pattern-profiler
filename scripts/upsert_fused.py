@@ -46,6 +46,12 @@ for i in range(0, len(chunks), BATCH_SIZE):
                 "severity": chunk.get("severity"),
                 "published_at": chunk.get("published_at"),
                 "tags": chunk.get("tags", []),
+                "cvss_score": chunk.get("cvss_score"),
+                "attack_vector": chunk.get("attack_vector"),
+                "attack_complexity": chunk.get("attack_complexity"),
+                "privileges_required": chunk.get("privileges_required"),
+                "exploitability_score": chunk.get("exploitability_score"),
+                "impact_score": chunk.get("impact_score"),
             }
         })
 

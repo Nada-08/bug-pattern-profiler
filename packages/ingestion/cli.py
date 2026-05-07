@@ -15,21 +15,37 @@ from packages.ingestion.storage.local_store import save_jsonl, load_jsonl
 
 def run_ingest_local():
     print("Fetching NVD...")
-    nvd_raw_path = fetch_nvd_page(start_index=0, results_per_page=100)
+    print("Fetching NVD pages...")
 
+    nvd_raw_paths = []
+    results_per_page = 100
+    max_results = 1000
+
+    for start_index in range(0, max_results, results_per_page):
+        print(f"Fetching NVD start_index={start_index}...")
+        path = fetch_nvd_page(
+            start_index=start_index,
+            results_per_page=results_per_page
+        )
+        nvd_raw_paths.append(path)
+    
     print("Fetching CISA KEV...")
     cisa_raw_path = fetch_cisa_kev()
 
     print("Normalizing NVD...")
-    nvd_docs = normalize_nvd_file(nvd_raw_path)
-    nvd_normalized_path = Path("data/normalized/nvd/nvd_page_0.normalized.jsonl")
+    nvd_docs = []
+
+    for path in nvd_raw_paths:
+        nvd_docs.extend(normalize_nvd_file(path))
+
+    nvd_normalized_path = Path("data/normalized/nvd/nvd_combined.normalized.jsonl")
     save_jsonl(nvd_normalized_path, [doc.model_dump() for doc in nvd_docs])
 
     print("Chunking NVD...")
     nvd_chunks = []
     for doc in nvd_docs:
         nvd_chunks.extend(chunk_document(doc))
-    nvd_chunks_path = Path("data/chunks/nvd/nvd_page_0.chunks.jsonl")
+    nvd_chunks_path = Path("data/chunks/nvd/nvd_combined.chunks.jsonl")
     save_jsonl(nvd_chunks_path, [chunk.model_dump() for chunk in nvd_chunks])
 
     print("Normalizing CISA KEV...")
