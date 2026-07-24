@@ -12,53 +12,29 @@ def get_english_description(descriptions: list[dict]) -> str:
 def extract_cvss_metrics(cve: dict) -> dict:
     metrics = cve.get("metrics", {})
 
-    # Prefer newer CVSS versions first
-    if metrics.get("cvssMetricV31"):
-        metric = metrics["cvssMetricV31"][0]
-        cvss_data = metric.get("cvssData", {})
+    metric = None
 
-        return {
-            "cvss_score": cvss_data.get("baseScore"),
-            "severity": cvss_data.get("baseSeverity"),
-            "cvss_version": cvss_data.get("version"),
-            "attack_vector": cvss_data.get("attackVector"),
-            "attack_complexity": cvss_data.get("attackComplexity"),
-            "privileges_required": cvss_data.get("privilegesRequired"),
-            "exploitability_score": metric.get("exploitabilityScore"),
-            "impact_score": metric.get("impactScore"),
-        }
+    for version in ("cvssMetricV31", "cvssMetricV30", "cvssMetricV2"):
+        metric_list = metrics.get(version)
+        if metric_list:
+            metric = metric_list[0]
+            break
 
-    if metrics.get("cvssMetricV30"):
-        metric = metrics["cvssMetricV30"][0]
-        cvss_data = metric.get("cvssData", {})
+    if metric is None:
+        return {}
 
-        return {
-            "cvss_score": cvss_data.get("baseScore"),
-            "severity": cvss_data.get("baseSeverity"),
-            "cvss_version": cvss_data.get("version"),
-            "attack_vector": cvss_data.get("attackVector"),
-            "attack_complexity": cvss_data.get("attackComplexity"),
-            "privileges_required": cvss_data.get("privilegesRequired"),
-            "exploitability_score": metric.get("exploitabilityScore"),
-            "impact_score": metric.get("impactScore"),
-        }
+    cvss = metric.get("cvssData", {})
 
-    if metrics.get("cvssMetricV2"):
-        metric = metrics["cvssMetricV2"][0]
-        cvss_data = metric.get("cvssData", {})
-
-        return {
-            "cvss_score": cvss_data.get("baseScore"),
-            "severity": metric.get("baseSeverity"),
-            "cvss_version": cvss_data.get("version"),
-            "attack_vector": cvss_data.get("accessVector"),
-            "attack_complexity": cvss_data.get("accessComplexity"),
-            "privileges_required": cvss_data.get("authentication"),
-            "exploitability_score": metric.get("exploitabilityScore"),
-            "impact_score": metric.get("impactScore"),
-        }
-
-    return {}
+    return {
+        "cvss_score": cvss.get("baseScore"),
+        "severity": cvss.get("baseSeverity") or metric.get("baseSeverity"),
+        "cvss_version": cvss.get("version"),
+        "attack_vector": cvss.get("attackVector") or cvss.get("accessVector"),
+        "attack_complexity": cvss.get("attackComplexity") or cvss.get("accessComplexity"),
+        "privileges_required": cvss.get("privilegesRequired") or cvss.get("authentication"),
+        "exploitability_score": metric.get("exploitabilityScore"),
+        "impact_score": metric.get("impactScore"),
+    }
 
 
 def extract_cwe_ids(cve: dict) -> list[str]:
@@ -74,6 +50,30 @@ def extract_cwe_ids(cve: dict) -> list[str]:
                 cwe_ids.append(value)
 
     return list(set(cwe_ids))
+
+
+def build_nvd_content(
+    cve_id: str,
+    description: str,
+    cvss: dict,
+    cwe_ids: list[str]
+) -> str:
+    return f"""
+CVE: {cve_id}
+
+Severity: {cvss.get("severity")}
+CVSS Score: {cvss.get("cvss_score")}
+CVSS Version: {cvss.get("cvss_version")}
+
+Attack Vector: {cvss.get("attack_vector")}
+Attack Complexity: {cvss.get("attack_complexity")}
+Privileges Required: {cvss.get("privileges_required")}
+
+CWEs: {", ".join(cwe_ids) if cwe_ids else "None"}
+
+Description:
+{description}
+""".strip()
 
 def normalize_nvd_file(raw_path: Path) -> list[NormalizedDocument]:
     data = load_json(raw_path)
@@ -94,22 +94,7 @@ def normalize_nvd_file(raw_path: Path) -> list[NormalizedDocument]:
 
         cwe_ids = extract_cwe_ids(cve)
 
-        content=f"""
-CVE: {cve_id}
-
-Severity: {cvss.get("severity")}
-CVSS Score: {cvss.get("cvss_score")}
-CVSS Version: {cvss.get("cvss_version")}
-
-Attack Vector: {cvss.get("attack_vector")}
-Attack Complexity: {cvss.get("attack_complexity")}
-Privileges Required: {cvss.get("privileges_required")}
-
-CWEs: {", ".join(cwe_ids) if cwe_ids else "None"}
-
-Description:
-{description}
-""".strip()
+        content = build_nvd_content(cve_id, description, cvss, cwe_ids)
 
         doc = NormalizedDocument(
             doc_id=f"cve:{cve_id}",

@@ -2,7 +2,6 @@ from pinecone import Pinecone
 
 from packages.common.settings import settings
 
-
 class PineconeVectorStore:
     def __init__(self):
         if not settings.pinecone_api_key:
@@ -17,7 +16,6 @@ class PineconeVectorStore:
         cleaned = {}
 
         for key, value in metadata.items():
-
             # skip None values
             if value is None:
                 continue
@@ -40,7 +38,7 @@ class PineconeVectorStore:
 
         return cleaned
 
-    def upsert_vectors(self, vectors: list[dict],namespace: str | None = None):
+    def upsert_vectors(self, vectors: list[dict],namespace: str | None = None): # insert if not exists, update if exists
         # clean metadata before upload
         for vector in vectors:
             if "metadata" in vector:
@@ -54,12 +52,16 @@ class PineconeVectorStore:
         )
 
     def query(self, vector: list[float], top_k: int = 5, namespace: str | None = None):
-        return self.index.query(
+        result = self.index.query(
             vector=vector,
             top_k=top_k,
             include_metadata=True,
             namespace=namespace
         )
-    
+
+        from pprint import pprint
+        pprint(result)
+
+        return result
     def delete_namespace(self, namespace: str):
         self.index.delete(delete_all=True, namespace=namespace)

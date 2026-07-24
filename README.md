@@ -1,35 +1,20 @@
 # Bug Pattern Profiler
 
-A cybersecurity-focused RAG (Retrieval-Augmented Generation) system for semantic vulnerability retrieval, grounded CVE analysis, and threat intelligence exploration.
+**Bug Pattern Profiler** is a cybersecurity-focused Retrieval-Augmented Generation (RAG) system that enables semantic search and AI-assisted analysis over real-world vulnerability intelligence.
 
-## Overview
+Modern cybersecurity teams rely on multiple public vulnerability databases, but these sources serve different purposes and are difficult to explore using traditional keyword search. The **National Vulnerability Database (NVD)** provides comprehensive technical information about publicly disclosed vulnerabilities, including CVSS scores, CWE mappings, affected products, and attack characteristics. The **CISA Known Exploited Vulnerabilities (KEV) Catalog** is a curated list of vulnerabilities that are actively exploited in the wild, helping organizations prioritize remediation based on real-world threats.
 
-Bug Pattern Profiler is a Python-based retrieval and AI analysis platform that ingests vulnerability intelligence from public cybersecurity sources, normalizes the data into a unified schema, generates semantic embeddings, and enables natural-language querying over vulnerability records.
-
-The system focuses on:
-- semantic vulnerability retrieval
-- grounded cybersecurity analysis
-- retrieval quality and enrichment
-- vulnerability intelligence workflows
-
-rather than general chatbot behavior.
-
-The project combines:
-- CVE and threat intelligence ingestion
-- metadata enrichment
-- semantic vector search
-- grounded RAG generation
-- structured vulnerability analysis
-
-into a modular AI systems pipeline.
+Bug Pattern Profiler combines these complementary sources into a unified knowledge base. It ingests, normalizes, enriches, and indexes vulnerability data to enable semantic retrieval and grounded AI-generated cybersecurity analysis. Rather than functioning as a general-purpose chatbot, the system is designed to help users explore vulnerability patterns, understand security risks, and retrieve relevant threat intelligence using natural language.
 
 ## Project Goals
 
-- Aggregate vulnerability intelligence from authoritative security sources
-- Build high-quality semantic retrieval for cybersecurity data
-- Generate grounded AI-assisted vulnerability analysis
-- Explore vulnerability patterns and exploitation trends
-- Create a scalable foundation for hybrid retrieval, reranking, and advanced threat-intelligence workflows
+The project aims to:
+
+* Aggregate vulnerability intelligence from authoritative cybersecurity sources.
+* Combine NVD's technical vulnerability data with CISA KEV's exploitation intelligence into a unified retrieval corpus.
+* Enable semantic search over vulnerability records instead of relying solely on keyword matching.
+* Generate grounded AI-assisted vulnerability analysis using retrieved evidence.
+* Provide a modular foundation for advanced retrieval techniques such as hybrid search, reranking, metadata filtering, and retrieval evaluation.
 
 ## What's Complete
 

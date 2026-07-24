@@ -12,7 +12,7 @@ def build_kev_content(item: dict) -> str:
         f"Description: {item.get('shortDescription', '')}",
         f"Required Action: {item.get('requiredAction', '')}",
         f"Due Date: {item.get('dueDate', '')}",
-        f"Known Ransomware Use: {item.get('knownRonsomwareCapaignUse', '')}",
+        f"Known Ransomware Use: {item.get('knownRansomwareCapaignUse', '')}",
         f"Notes: {item.get('notes', '')}",
     ]
 

@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 
 from packages.ingestion.sources.nvd_cve import fetch_nvd_page
 from packages.ingestion.sources.cisa_kev import fetch_cisa_kev
@@ -13,84 +14,149 @@ from packages.ingestion.chunking.chunker import chunk_document
 from packages.ingestion.storage.local_store import save_jsonl, load_jsonl
 
 
-def run_ingest_local():
-    print("Fetching NVD...")
-    print("Fetching NVD pages...")
+RAW_NVD_DIR = Path("data/raw/nvd")
+RAW_KEV_DIR = Path("data/raw/cisa_kev")
 
-    nvd_raw_paths = []
-    results_per_page = 100
-    max_results = 1000
+NORMALIZED_NVD_PATH = Path("data/normalized/nvd/nvd_combined.normalized.jsonl")
+NORMALIZED_KEV_PATH = Path("data/normalized/cisa_kev/cisa_kev.normalized.jsonl")
+NORMALIZED_FUSED_PATH = Path("data/normalized/fused/kev_nvd.normalized.jsonl")
 
-    for start_index in range(0, max_results, results_per_page):
-        print(f"Fetching NVD start_index={start_index}...")
-        path = fetch_nvd_page(
-            start_index=start_index,
-            results_per_page=results_per_page
-        )
-        nvd_raw_paths.append(path)
-    
+NVD_CHUNKS_PATH = Path("data/chunks/nvd/nvd_combined.chunks.jsonl")
+KEV_CHUNKS_PATH = Path("data/chunks/cisa_kev/cisa_kev.chunks.jsonl")
+FUSED_CHUNKS_PATH = Path("data/chunks/fused/kev_nvd.chunks.jsonl")
+
+
+def fetch_data():
+    # print("Fetching NVD...")
+
+    # results_per_page = 100
+    # start_index = 0
+
+    # while True:
+    #     path, total_results = fetch_nvd_page(
+    #         start_index=start_index,
+    #         results_per_page=results_per_page,
+    #     )
+
+    #     print(f"Fetched {path.name}")
+
+    #     start_index += results_per_page
+
+    #     if start_index >= total_results:
+    #         break
+
+    #     time.sleep(10)
+
     print("Fetching CISA KEV...")
-    cisa_raw_path = fetch_cisa_kev()
+    fetch_cisa_kev()
 
+
+def normalize_data():
     print("Normalizing NVD...")
+
     nvd_docs = []
 
-    for path in nvd_raw_paths:
+    raw_paths = sorted(RAW_NVD_DIR.glob("*.json"))
+
+    for path in raw_paths:
+        print(f"Normalizing {path.name}")
         nvd_docs.extend(normalize_nvd_file(path))
 
-    nvd_normalized_path = Path("data/normalized/nvd/nvd_combined.normalized.jsonl")
-    save_jsonl(nvd_normalized_path, [doc.model_dump() for doc in nvd_docs])
-
-    print("Chunking NVD...")
-    nvd_chunks = []
-    for doc in nvd_docs:
-        nvd_chunks.extend(chunk_document(doc))
-    nvd_chunks_path = Path("data/chunks/nvd/nvd_combined.chunks.jsonl")
-    save_jsonl(nvd_chunks_path, [chunk.model_dump() for chunk in nvd_chunks])
-
-    print("Normalizing CISA KEV...")
-    cisa_docs = normalize_cisa_kev_file(cisa_raw_path)
-    cisa_normalized_path = Path("data/normalized/cisa_kev/cisa_kev.normalized.jsonl")
-    save_jsonl(cisa_normalized_path, [doc.model_dump() for doc in cisa_docs])
-
-    print("Chunking CISA KEV...")
-    cisa_chunks = []
-    for doc in cisa_docs:
-        cisa_chunks.extend(chunk_document(doc))
-    cisa_chunks_path = Path("data/chunks/cisa_kev/cisa_kev.chunks.jsonl")
-    save_jsonl(cisa_chunks_path, [chunk.model_dump() for chunk in cisa_chunks])
-
-    print("Fusing KEV + NVD...")
-    fused_normalized_path = Path("data/normalized/fused/kev_nvd.normalized.jsonl")
-
-    fuse_kev_with_nvd(
-        kev_path=cisa_normalized_path,
-        nvd_path=nvd_normalized_path,
-        output_path=fused_normalized_path,
+    save_jsonl(
+        NORMALIZED_NVD_PATH,
+        [doc.model_dump() for doc in nvd_docs],
     )
 
-    print("Loading fused docs...")
-    fused_docs = load_jsonl(fused_normalized_path)
+    print(f"NVD documents: {len(nvd_docs)}")
 
-    print("Chunking fused KEV + NVD...")
+    print("Normalizing CISA KEV...")
+
+    kev_raw_path = next(RAW_KEV_DIR.glob("*.json"))
+
+    kev_docs = normalize_cisa_kev_file(kev_raw_path)
+
+    save_jsonl(
+        NORMALIZED_KEV_PATH,
+        [doc.model_dump() for doc in kev_docs],
+    )
+
+    print(f"KEV documents: {len(kev_docs)}")
+
+
+def chunk_data():
+    print("Chunking NVD...")
+
+    nvd_docs = [
+        NormalizedDocument(**doc)
+        for doc in load_jsonl(NORMALIZED_NVD_PATH)
+    ]
+
+    nvd_chunks = []
+
+    for doc in nvd_docs:
+        nvd_chunks.extend(chunk_document(doc))
+
+    save_jsonl(
+        NVD_CHUNKS_PATH,
+        [chunk.model_dump() for chunk in nvd_chunks],
+    )
+
+    print(f"NVD chunks: {len(nvd_chunks)}")
+
+    print("Chunking CISA KEV...")
+
+    kev_docs = [
+        NormalizedDocument(**doc)
+        for doc in load_jsonl(NORMALIZED_KEV_PATH)
+    ]
+
+    kev_chunks = []
+
+    for doc in kev_docs:
+        kev_chunks.extend(chunk_document(doc))
+
+    save_jsonl(
+        KEV_CHUNKS_PATH,
+        [chunk.model_dump() for chunk in kev_chunks],
+    )
+
+    print(f"KEV chunks: {len(kev_chunks)}")
+
+
+def fuse_data():
+    print("Fusing KEV + NVD...")
+
+    fuse_kev_with_nvd(
+        kev_path=NORMALIZED_KEV_PATH,
+        nvd_path=NORMALIZED_NVD_PATH,
+        output_path=NORMALIZED_FUSED_PATH,
+    )
+
+
+def chunk_fused_data():
+    print("Chunking fused documents...")
+
+    fused_docs = [
+        NormalizedDocument(**doc)
+        for doc in load_jsonl(NORMALIZED_FUSED_PATH)
+    ]
+
     fused_chunks = []
 
-    for doc_dict in fused_docs:
-        doc = NormalizedDocument(**doc_dict)
+    for doc in fused_docs:
         fused_chunks.extend(chunk_document(doc))
 
-    fused_chunks_path = Path("data/chunks/fused/kev_nvd.chunks.jsonl")
-    save_jsonl(fused_chunks_path, [chunk.model_dump() for chunk in fused_chunks])
+    save_jsonl(
+        FUSED_CHUNKS_PATH,
+        [chunk.model_dump() for chunk in fused_chunks],
+    )
 
-    print()
-    print("Done.")
-    print(f"NVD docs: {len(nvd_docs)}")
-    print(f"NVD chunks: {len(nvd_chunks)}")
-    print(f"CISA KEV docs: {len(cisa_docs)}")
-    print(f"CISA KEV chunks: {len(cisa_chunks)}")
-    print(f"Fused docs: {len(fused_docs)}")
     print(f"Fused chunks: {len(fused_chunks)}")
 
 
 if __name__ == "__main__":
-    run_ingest_local()
+    # fetch_data()         
+    normalize_data()        # Uses existing raw JSON files
+    chunk_data()
+    fuse_data()
+    chunk_fused_data()

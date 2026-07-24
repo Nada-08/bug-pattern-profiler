@@ -1,19 +1,29 @@
 from packages.rag.rag_service import RAGService
 
-
 rag = RAGService()
 
-result = rag.answer(
-    query="What are common patterns in authentication bypass vulnerabilities?",
-    top_k=5,
-    namespace="fused"
-)
+queries = [
+    "Which vulnerabilities have confirmed ransomware exploitation?"
+]
 
-print(result["sources"][0])
+for i, query in enumerate(queries, 1):
+    print("=" * 100)
+    print(f"TEST {i}")
+    print(query)
+    print("=" * 100)
 
-print("ANSWER:")
-print(result["answer"])
+    result = rag.answer(
+        query=query,
+        top_k=5,
+        namespace="fused",
+    )
 
-print("\nSOURCES:")
-for source in result["sources"]:
-    print("-", source["cve_id"], "|", source["title"])
+    print("\nSources:")
+    for src in result["sources"]:
+        print(
+            f"- {src.cve_id} | {src.title} | score={src.score:.3f}"
+        )
+
+    print("\nAnswer:")
+    print(result["answer"])
+    print("\n")

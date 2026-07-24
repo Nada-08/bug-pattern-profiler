@@ -1,10 +1,12 @@
 from packages.retrieval.search_service import SearchService
-from packages.generation.generation_service import GenerationService
+from packages.generation.generation_service import AnswerGenerationService
+from packages.retrieval.vector_store import PineconeVectorStore
+from packages.retrieval.embedder import Embedder
 
 class RAGService: 
     def __init__(self):
-        self.search_service = SearchService()
-        self.generation_service = GenerationService()
+        self.search_service = SearchService(embedder=Embedder(), vector_store=PineconeVectorStore())
+        self.generation_service = AnswerGenerationService()
 
     def answer(self, query: str, top_k: int = 5, namespace: str | None = None) -> dict:
         contexts = self.search_service.search(query=query, top_k=top_k, namespace=namespace)
