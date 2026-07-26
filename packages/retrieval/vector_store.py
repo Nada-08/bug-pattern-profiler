@@ -51,17 +51,17 @@ class PineconeVectorStore:
             namespace=namespace
         )
 
-    def query(self, vector: list[float], top_k: int = 5, namespace: str | None = None):
+    def query(self, vector: list[float], top_k: int = 5, namespace: str | None = None, filter: dict | None = None) -> dict:
+
         result = self.index.query(
             vector=vector,
             top_k=top_k,
+            filter=filter,
             include_metadata=True,
             namespace=namespace
         )
 
-        from pprint import pprint
-        pprint(result)
-
         return result
+    
     def delete_namespace(self, namespace: str):
         self.index.delete(delete_all=True, namespace=namespace)

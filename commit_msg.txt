@@ -1,0 +1,9 @@
+﻿feat: add metadata-aware vulnerability retrieval evaluation
+
+- add query normalization and entity extraction for CVE, CWE, date, vendor, and product inputs
+- apply CVE and CWE metadata filters to Pinecone retrieval
+- add vendor/product vocabulary resolution and local metadata helpers
+- add NVD and fused-corpus retrieval benchmarks, metrics, reports, and metadata profiling
+- add scripts for evaluation and corpus vocabulary inspection
+- refresh README with current architecture, usage, limitations, and evaluation workflow
+- remove obsolete project and environment-template files

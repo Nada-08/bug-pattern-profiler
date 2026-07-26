@@ -1,0 +1,457 @@
+{
+  "corpus": {
+    "total_documents": 1653,
+    "unique_cves": 1653,
+    "sources": {
+      "CISA-KEV": 1502,
+      "CISA-KEV + NVD": 151
+    }
+  },
+  "top_vendors": [
+    [
+      "Microsoft",
+      382
+    ],
+    [
+      "Cisco",
+      94
+    ],
+    [
+      "Apple",
+      93
+    ],
+    [
+      "Adobe",
+      80
+    ],
+    [
+      "Google",
+      72
+    ],
+    [
+      "Oracle",
+      45
+    ],
+    [
+      "Apache",
+      39
+    ],
+    [
+      "Ivanti",
+      35
+    ],
+    [
+      "Fortinet",
+      28
+    ],
+    [
+      "Linux",
+      26
+    ],
+    [
+      "D-Link",
+      26
+    ],
+    [
+      "VMware",
+      26
+    ],
+    [
+      "Citrix",
+      22
+    ],
+    [
+      "Synacor",
+      18
+    ],
+    [
+      "SonicWall",
+      17
+    ],
+    [
+      "Android",
+      17
+    ],
+    [
+      "Palo Alto Networks",
+      15
+    ],
+    [
+      "Samsung",
+      15
+    ],
+    [
+      "SAP",
+      14
+    ],
+    [
+      "Mozilla",
+      13
+    ],
+    [
+      "Atlassian",
+      13
+    ],
+    [
+      "Trend Micro",
+      12
+    ],
+    [
+      "Qualcomm",
+      12
+    ],
+    [
+      "Zyxel",
+      12
+    ],
+    [
+      "SolarWinds",
+      11
+    ],
+    [
+      "Roundcube",
+      11
+    ],
+    [
+      "QNAP",
+      11
+    ],
+    [
+      "Arm",
+      9
+    ],
+    [
+      "Zoho",
+      9
+    ],
+    [
+      "Juniper",
+      8
+    ]
+  ],
+  "top_products": [
+    [
+      "Windows",
+      170
+    ],
+    [
+      "Multiple Products",
+      79
+    ],
+    [
+      "Chromium V8",
+      39
+    ],
+    [
+      "Internet Explorer",
+      36
+    ],
+    [
+      "Flash Player",
+      33
+    ],
+    [
+      "Kernel",
+      29
+    ],
+    [
+      "Office",
+      29
+    ],
+    [
+      "Win32k",
+      25
+    ],
+    [
+      "Exchange Server",
+      17
+    ],
+    [
+      "ColdFusion",
+      16
+    ],
+    [
+      "Zimbra Collaboration Suite (ZCS)",
+      15
+    ],
+    [
+      "IOS and IOS XE Software",
+      14
+    ],
+    [
+      "Acrobat and Reader",
+      13
+    ],
+    [
+      "Mobile Devices",
+      13
+    ],
+    [
+      "WebLogic Server",
+      12
+    ],
+    [
+      "PAN-OS",
+      12
+    ],
+    [
+      "Multiple Chipsets",
+      11
+    ],
+    [
+      "iOS, iPadOS, and macOS",
+      11
+    ],
+    [
+      "NetWeaver",
+      10
+    ],
+    [
+      "vCenter Server",
+      9
+    ],
+    [
+      "SharePoint",
+      8
+    ],
+    [
+      "FortiOS",
+      8
+    ],
+    [
+      "iOS",
+      8
+    ],
+    [
+      "Reader and Acrobat",
+      8
+    ],
+    [
+      "Pulse Connect Secure",
+      8
+    ],
+    [
+      "Endpoint Manager Mobile (EPMM)",
+      7
+    ],
+    [
+      "Webmail",
+      7
+    ],
+    [
+      "Junos OS",
+      7
+    ],
+    [
+      "Java SE",
+      7
+    ],
+    [
+      "Framework",
+      6
+    ]
+  ],
+  "top_cwes": [
+    [
+      "CWE-787",
+      116
+    ],
+    [
+      "CWE-78",
+      106
+    ],
+    [
+      "CWE-20",
+      106
+    ],
+    [
+      "CWE-416",
+      101
+    ],
+    [
+      "CWE-22",
+      77
+    ],
+    [
+      "CWE-119",
+      71
+    ],
+    [
+      "CWE-502",
+      69
+    ],
+    [
+      "CWE-94",
+      61
+    ],
+    [
+      "CWE-287",
+      42
+    ],
+    [
+      "CWE-284",
+      40
+    ],
+    [
+      "CWE-306",
+      38
+    ],
+    [
+      "CWE-843",
+      38
+    ],
+    [
+      "CWE-77",
+      33
+    ],
+    [
+      "CWE-79",
+      33
+    ],
+    [
+      "CWE-122",
+      31
+    ],
+    [
+      "CWE-89",
+      29
+    ],
+    [
+      "CWE-434",
+      23
+    ],
+    [
+      "CWE-200",
+      22
+    ],
+    [
+      "CWE-190",
+      20
+    ],
+    [
+      "CWE-918",
+      19
+    ],
+    [
+      "CWE-269",
+      18
+    ],
+    [
+      "CWE-125",
+      17
+    ],
+    [
+      "CWE-288",
+      17
+    ],
+    [
+      "CWE-59",
+      16
+    ],
+    [
+      "CWE-863",
+      16
+    ],
+    [
+      "CWE-264",
+      16
+    ],
+    [
+      "CWE-121",
+      15
+    ],
+    [
+      "CWE-120",
+      15
+    ],
+    [
+      "CWE-74",
+      13
+    ],
+    [
+      "CWE-399",
+      12
+    ]
+  ],
+  "severity_distribution": {
+    "UNKNOWN": 1502,
+    "MEDIUM": 17,
+    "CRITICAL": 34,
+    "HIGH": 99,
+    "LOW": 1
+  },
+  "publication_years": {
+    "2021": 311,
+    "2022": 555,
+    "2023": 187,
+    "2024": 186,
+    "2025": 245,
+    "2026": 169
+  },
+  "metadata_completeness": {
+    "attack_complexity": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "attack_vector": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "cve_id": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "cvss_score": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "cwe_ids": {
+      "count": 1483,
+      "percent": 89.72
+    },
+    "due_date": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "exploitability_score": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "impact_score": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "known_ransomware_use": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "notes": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "privileges_required": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "product": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "published_at": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "required_action": {
+      "count": 1653,
+      "percent": 100.0
+    },
+    "severity": {
+      "count": 151,
+      "percent": 9.13
+    },
+    "vendor": {
+      "count": 1653,
+      "percent": 100.0
+    }
+  }
+}

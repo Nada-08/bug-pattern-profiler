@@ -1,0 +1,216 @@
+[
+  {
+    "id": "nvd_cve_001",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-1999-0872"
+    }
+  },
+  {
+    "id": "nvd_cve_002",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2004-2328"
+    }
+  },
+  {
+    "id": "nvd_cve_003",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2007-6263"
+    }
+  },
+  {
+    "id": "nvd_cve_004",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2009-2354"
+    }
+  },
+  {
+    "id": "nvd_cve_005",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2011-4290"
+    }
+  },
+  {
+    "id": "nvd_cve_006",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2014-6820"
+    }
+  },
+
+  {
+    "id": "nvd_cwe_001",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-787"
+    }
+  },
+  {
+    "id": "nvd_cwe_002",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-78"
+    }
+  },
+  {
+    "id": "nvd_cwe_003",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-20"
+    }
+  },
+  {
+    "id": "nvd_cwe_004",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-416"
+    }
+  },
+  {
+    "id": "nvd_cwe_005",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-79"
+    }
+  },
+  {
+    "id": "nvd_cwe_006",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-89"
+    }
+  },
+
+  {
+    "id": "nvd_meta_001",
+    "type": "severity",
+    "filters": {
+      "severity": "CRITICAL"
+    }
+  },
+  {
+    "id": "nvd_meta_002",
+    "type": "severity",
+    "filters": {
+      "severity": "HIGH"
+    }
+  },
+  {
+    "id": "nvd_meta_003",
+    "type": "attack_vector",
+    "filters": {
+      "attack_vector": "NETWORK"
+    }
+  },
+  {
+    "id": "nvd_meta_004",
+    "type": "attack_complexity",
+    "filters": {
+      "attack_complexity": "LOW"
+    }
+  },
+  {
+    "id": "nvd_meta_005",
+    "type": "privileges_required",
+    "filters": {
+      "privileges_required": "NONE"
+    }
+  },
+  {
+    "id": "nvd_meta_006",
+    "type": "cvss_score",
+    "filters": {
+      "cvss_score_gte": 9.0
+    }
+  },
+
+  {
+    "id": "nvd_meta_007",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2005
+    }
+  },
+  {
+    "id": "nvd_meta_008",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2008
+    }
+  },
+  {
+    "id": "nvd_meta_009",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2010
+    }
+  },
+  {
+    "id": "nvd_meta_010",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2012
+    }
+  },
+  {
+    "id": "nvd_meta_011",
+    "type": "published_after",
+    "filters": {
+      "published_after": "2010-01-01"
+    }
+  },
+  {
+    "id": "nvd_meta_012",
+    "type": "published_after",
+    "filters": {
+      "published_after": "2012-01-01"
+    }
+  },
+
+  {
+    "id": "nvd_meta_013",
+    "type": "cvss_score",
+    "filters": {
+      "cvss_score_gte": 7.0
+    }
+  },
+  {
+    "id": "nvd_meta_014",
+    "type": "cvss_score",
+    "filters": {
+      "cvss_score_gte": 5.0
+    }
+  },
+  {
+    "id": "nvd_meta_015",
+    "type": "attack_vector",
+    "filters": {
+      "attack_vector": "LOCAL"
+    }
+  },
+  {
+    "id": "nvd_meta_016",
+    "type": "attack_complexity",
+    "filters": {
+      "attack_complexity": "HIGH"
+    }
+  },
+  {
+    "id": "nvd_meta_017",
+    "type": "privileges_required",
+    "filters": {
+      "privileges_required": "LOW"
+    }
+  },
+  {
+    "id": "nvd_meta_018",
+    "type": "severity",
+    "filters": {
+      "severity": "MEDIUM"
+    }
+  }
+]

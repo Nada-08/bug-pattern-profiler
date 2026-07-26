@@ -3,7 +3,8 @@ from packages.rag.rag_service import RAGService
 rag = RAGService()
 
 queries = [
-    "Which vulnerabilities have confirmed ransomware exploitation?"
+    # "What is CVE-2021-44228?",
+    "Show critical Microsoft vulnerabilities"
 ]
 
 for i, query in enumerate(queries, 1):
@@ -21,7 +22,7 @@ for i, query in enumerate(queries, 1):
     print("\nSources:")
     for src in result["sources"]:
         print(
-            f"- {src.cve_id} | {src.title} | score={src.score:.3f}"
+            f"- {src.cve_id} | {src.title} | score={src.score:.3f}" 
         )
 
     print("\nAnswer:")

@@ -1,0 +1,302 @@
+[
+  {
+    "scenario_id": "nvd_cve_001",
+    "queries": [
+      "What is CVE-1999-0872?",
+      "Explain CVE-1999-0872.",
+      "Show details for CVE-1999-0872.",
+      "Tell me about vulnerability CVE-1999-0872.",
+      "Give information about CVE-1999-0872."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cve_002",
+    "queries": [
+      "What is CVE-2004-2328?",
+      "Explain CVE-2004-2328.",
+      "Show details for CVE-2004-2328.",
+      "Tell me about vulnerability CVE-2004-2328.",
+      "Give information about CVE-2004-2328."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cve_003",
+    "queries": [
+      "What is CVE-2007-6263?",
+      "Explain CVE-2007-6263.",
+      "Show details for CVE-2007-6263.",
+      "Tell me about vulnerability CVE-2007-6263.",
+      "Give information about CVE-2007-6263."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cve_004",
+    "queries": [
+      "What is CVE-2009-2354?",
+      "Explain CVE-2009-2354.",
+      "Show details for CVE-2009-2354.",
+      "Tell me about vulnerability CVE-2009-2354.",
+      "Give information about CVE-2009-2354."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cve_005",
+    "queries": [
+      "What is CVE-2011-4290?",
+      "Explain CVE-2011-4290.",
+      "Show details for CVE-2011-4290.",
+      "Tell me about vulnerability CVE-2011-4290.",
+      "Give information about CVE-2011-4290."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cve_006",
+    "queries": [
+      "What is CVE-2014-6820?",
+      "Explain CVE-2014-6820.",
+      "Show details for CVE-2014-6820.",
+      "Tell me about vulnerability CVE-2014-6820.",
+      "Give information about CVE-2014-6820."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_001",
+    "queries": [
+      "Find vulnerabilities associated with CWE-787.",
+      "List CVEs classified as CWE-787.",
+      "Show vulnerabilities related to CWE-787.",
+      "Which CVEs have CWE-787?",
+      "Search for vulnerabilities with CWE-787."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_002",
+    "queries": [
+      "Find vulnerabilities associated with CWE-78.",
+      "List CVEs classified as CWE-78.",
+      "Show vulnerabilities related to CWE-78.",
+      "Which CVEs have CWE-78?",
+      "Search for vulnerabilities with CWE-78."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_003",
+    "queries": [
+      "Find vulnerabilities associated with CWE-20.",
+      "List CVEs classified as CWE-20.",
+      "Show vulnerabilities related to CWE-20.",
+      "Which CVEs have CWE-20?",
+      "Search for vulnerabilities with CWE-20."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_004",
+    "queries": [
+      "Find vulnerabilities associated with CWE-416.",
+      "List CVEs classified as CWE-416.",
+      "Show vulnerabilities related to CWE-416.",
+      "Which CVEs have CWE-416?",
+      "Search for vulnerabilities with CWE-416."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_005",
+    "queries": [
+      "Find vulnerabilities associated with CWE-79.",
+      "List CVEs classified as CWE-79.",
+      "Show vulnerabilities related to CWE-79.",
+      "Which CVEs have CWE-79?",
+      "Search for vulnerabilities with CWE-79."
+    ]
+  },
+  {
+    "scenario_id": "nvd_cwe_006",
+    "queries": [
+      "Find vulnerabilities associated with CWE-89.",
+      "List CVEs classified as CWE-89.",
+      "Show vulnerabilities related to CWE-89.",
+      "Which CVEs have CWE-89?",
+      "Search for vulnerabilities with CWE-89."
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_001",
+    "queries": [
+      "Show critical vulnerabilities.",
+      "Find vulnerabilities with critical severity.",
+      "List all critical CVEs.",
+      "Search for critical security vulnerabilities.",
+      "Which vulnerabilities are rated critical?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_002",
+    "queries": [
+      "Show high severity vulnerabilities.",
+      "Find vulnerabilities with high severity.",
+      "List all high severity CVEs.",
+      "Search for high risk vulnerabilities.",
+      "Which vulnerabilities are rated high?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_003",
+    "queries": [
+      "Find network exploitable vulnerabilities.",
+      "Show vulnerabilities with attack vector NETWORK.",
+      "List remotely exploitable CVEs.",
+      "Search for network attack vulnerabilities.",
+      "Which vulnerabilities can be exploited over the network?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_004",
+    "queries": [
+      "Find vulnerabilities with low attack complexity.",
+      "Show CVEs requiring low attack complexity.",
+      "List easy to exploit vulnerabilities.",
+      "Search for low complexity vulnerabilities.",
+      "Which vulnerabilities have low attack complexity?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_005",
+    "queries": [
+      "Find vulnerabilities requiring no privileges.",
+      "Show CVEs with privileges required set to NONE.",
+      "List vulnerabilities that require no privileges.",
+      "Search for privilege-free vulnerabilities.",
+      "Which vulnerabilities require no privileges?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_006",
+    "queries": [
+      "Find vulnerabilities with CVSS score at least 9.0.",
+      "Show CVEs with CVSS score 9 or higher.",
+      "List critical CVSS vulnerabilities.",
+      "Search for vulnerabilities scoring at least 9.",
+      "Which vulnerabilities have CVSS ≥ 9.0?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_007",
+    "queries": [
+      "Show vulnerabilities published in 2005.",
+      "List CVEs from 2005.",
+      "Find vulnerabilities disclosed during 2005.",
+      "Search for 2005 security vulnerabilities.",
+      "Which CVEs were published in 2005?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_008",
+    "queries": [
+      "Show vulnerabilities published in 2008.",
+      "List CVEs from 2008.",
+      "Find vulnerabilities disclosed during 2008.",
+      "Search for 2008 security vulnerabilities.",
+      "Which CVEs were published in 2008?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_009",
+    "queries": [
+      "Show vulnerabilities published in 2010.",
+      "List CVEs from 2010.",
+      "Find vulnerabilities disclosed during 2010.",
+      "Search for 2010 security vulnerabilities.",
+      "Which CVEs were published in 2010?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_010",
+    "queries": [
+      "Show vulnerabilities published in 2012.",
+      "List CVEs from 2012.",
+      "Find vulnerabilities disclosed during 2012.",
+      "Search for 2012 security vulnerabilities.",
+      "Which CVEs were published in 2012?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_011",
+    "queries": [
+      "Show vulnerabilities published after 2010.",
+      "Find CVEs published since 2010.",
+      "List vulnerabilities released after January 2010.",
+      "Search for recent vulnerabilities after 2010.",
+      "Which CVEs were published after 2010?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_012",
+    "queries": [
+      "Show vulnerabilities published after 2012.",
+      "Find CVEs published since 2012.",
+      "List vulnerabilities released after January 2012.",
+      "Search for vulnerabilities newer than 2012.",
+      "Which CVEs were published after 2012?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_013",
+    "queries": [
+      "Find vulnerabilities with CVSS score at least 7.",
+      "Show CVEs with CVSS 7 or higher.",
+      "List high impact vulnerabilities.",
+      "Search for vulnerabilities scoring at least 7.",
+      "Which vulnerabilities have CVSS ≥ 7?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_014",
+    "queries": [
+      "Find vulnerabilities with CVSS score at least 5.",
+      "Show CVEs with CVSS 5 or higher.",
+      "List medium or higher severity vulnerabilities.",
+      "Search for vulnerabilities scoring at least 5.",
+      "Which vulnerabilities have CVSS ≥ 5?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_015",
+    "queries": [
+      "Find locally exploitable vulnerabilities.",
+      "Show vulnerabilities with attack vector LOCAL.",
+      "List CVEs requiring local access.",
+      "Search for local attack vulnerabilities.",
+      "Which vulnerabilities use a local attack vector?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_016",
+    "queries": [
+      "Find vulnerabilities with high attack complexity.",
+      "Show CVEs requiring high attack complexity.",
+      "List difficult to exploit vulnerabilities.",
+      "Search for high attack complexity CVEs.",
+      "Which vulnerabilities have high attack complexity?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_017",
+    "queries": [
+      "Find vulnerabilities requiring low privileges.",
+      "Show CVEs with privileges required set to LOW.",
+      "List vulnerabilities requiring low privileges.",
+      "Search for low privilege vulnerabilities.",
+      "Which vulnerabilities require low privileges?"
+    ]
+  },
+  {
+    "scenario_id": "nvd_meta_018",
+    "queries": [
+      "Show medium severity vulnerabilities.",
+      "Find vulnerabilities with medium severity.",
+      "List CVEs rated medium.",
+      "Search for medium risk vulnerabilities.",
+      "Which vulnerabilities are classified as medium severity?"
+    ]
+  }
+]

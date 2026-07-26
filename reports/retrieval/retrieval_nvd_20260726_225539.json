@@ -1,0 +1,3787 @@
+{
+  "namespace": "nvd",
+  "ks": [
+    10,
+    50,
+    100
+  ],
+  "num_queries": 150,
+  "created_at": "2026-07-26T22:55:39.541062",
+  "experiment_name": "regex_vendor_product_hybrid_retrieval_evaluation",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "retrieval_method": "dense",
+  "summary": {
+    "recall": 0.2059,
+    "precision": 0.7267,
+    "mrr": 0.81,
+    "ndcg": 0.725
+  },
+  "query_results": [
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "What is CVE-1999-0872?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Explain CVE-1999-0872.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Show details for CVE-1999-0872.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Tell me about vulnerability CVE-1999-0872.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Give information about CVE-1999-0872.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "What is CVE-2004-2328?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Explain CVE-2004-2328.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Show details for CVE-2004-2328.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Tell me about vulnerability CVE-2004-2328.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Give information about CVE-2004-2328.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "What is CVE-2007-6263?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Explain CVE-2007-6263.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Show details for CVE-2007-6263.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Tell me about vulnerability CVE-2007-6263.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Give information about CVE-2007-6263.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "What is CVE-2009-2354?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Explain CVE-2009-2354.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Show details for CVE-2009-2354.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Tell me about vulnerability CVE-2009-2354.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Give information about CVE-2009-2354.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_005",
+      "query": "What is CVE-2011-4290?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_005",
+      "query": "Explain CVE-2011-4290.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_005",
+      "query": "Show details for CVE-2011-4290.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_005",
+      "query": "Tell me about vulnerability CVE-2011-4290.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_005",
+      "query": "Give information about CVE-2011-4290.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_006",
+      "query": "What is CVE-2014-6820?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_006",
+      "query": "Explain CVE-2014-6820.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_006",
+      "query": "Show details for CVE-2014-6820.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_006",
+      "query": "Tell me about vulnerability CVE-2014-6820.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cve_006",
+      "query": "Give information about CVE-2014-6820.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "narrow"
+    },
+    {
+      "scenario_id": "nvd_cwe_001",
+      "query": "Find vulnerabilities associated with CWE-787.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.059880239520958084,
+          "50": 0.2994011976047904,
+          "100": 0.5988023952095808
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_001",
+      "query": "List CVEs classified as CWE-787.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.059880239520958084,
+          "50": 0.2994011976047904,
+          "100": 0.5988023952095808
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_001",
+      "query": "Show vulnerabilities related to CWE-787.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.059880239520958084,
+          "50": 0.2994011976047904,
+          "100": 0.5988023952095808
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_001",
+      "query": "Which CVEs have CWE-787?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.059880239520958084,
+          "50": 0.2994011976047904,
+          "100": 0.5988023952095808
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_001",
+      "query": "Search for vulnerabilities with CWE-787.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.059880239520958084,
+          "50": 0.2994011976047904,
+          "100": 0.5988023952095808
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_002",
+      "query": "Find vulnerabilities associated with CWE-78.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.06060606060606061,
+          "50": 0.30303030303030304,
+          "100": 0.6060606060606061
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_002",
+      "query": "List CVEs classified as CWE-78.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.06060606060606061,
+          "50": 0.30303030303030304,
+          "100": 0.6060606060606061
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_002",
+      "query": "Show vulnerabilities related to CWE-78.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.06060606060606061,
+          "50": 0.30303030303030304,
+          "100": 0.6060606060606061
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_002",
+      "query": "Which CVEs have CWE-78?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.06060606060606061,
+          "50": 0.30303030303030304,
+          "100": 0.6060606060606061
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_002",
+      "query": "Search for vulnerabilities with CWE-78.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.06060606060606061,
+          "50": 0.30303030303030304,
+          "100": 0.6060606060606061
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_003",
+      "query": "Find vulnerabilities associated with CWE-20.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0032123353678123997,
+          "50": 0.016061676839061997,
+          "100": 0.032123353678123995
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_003",
+      "query": "List CVEs classified as CWE-20.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0032123353678123997,
+          "50": 0.016061676839061997,
+          "100": 0.032123353678123995
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_003",
+      "query": "Show vulnerabilities related to CWE-20.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0032123353678123997,
+          "50": 0.016061676839061997,
+          "100": 0.032123353678123995
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_003",
+      "query": "Which CVEs have CWE-20?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0032123353678123997,
+          "50": 0.016061676839061997,
+          "100": 0.032123353678123995
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_003",
+      "query": "Search for vulnerabilities with CWE-20.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0032123353678123997,
+          "50": 0.016061676839061997,
+          "100": 0.032123353678123995
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_004",
+      "query": "Find vulnerabilities associated with CWE-416.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.03968253968253968,
+          "50": 0.1984126984126984,
+          "100": 0.3968253968253968
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_004",
+      "query": "List CVEs classified as CWE-416.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.03968253968253968,
+          "50": 0.1984126984126984,
+          "100": 0.3968253968253968
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_004",
+      "query": "Show vulnerabilities related to CWE-416.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.03968253968253968,
+          "50": 0.1984126984126984,
+          "100": 0.3968253968253968
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_004",
+      "query": "Which CVEs have CWE-416?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.03968253968253968,
+          "50": 0.1984126984126984,
+          "100": 0.3968253968253968
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_004",
+      "query": "Search for vulnerabilities with CWE-416.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.03968253968253968,
+          "50": 0.1984126984126984,
+          "100": 0.3968253968253968
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_005",
+      "query": "Find vulnerabilities associated with CWE-79.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0017627357659086903,
+          "50": 0.008813678829543451,
+          "100": 0.017627357659086903
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_005",
+      "query": "List CVEs classified as CWE-79.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0017627357659086903,
+          "50": 0.008813678829543451,
+          "100": 0.017627357659086903
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_005",
+      "query": "Show vulnerabilities related to CWE-79.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0017627357659086903,
+          "50": 0.008813678829543451,
+          "100": 0.017627357659086903
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_005",
+      "query": "Which CVEs have CWE-79?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0017627357659086903,
+          "50": 0.008813678829543451,
+          "100": 0.017627357659086903
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_005",
+      "query": "Search for vulnerabilities with CWE-79.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0017627357659086903,
+          "50": 0.008813678829543451,
+          "100": 0.017627357659086903
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_006",
+      "query": "Find vulnerabilities associated with CWE-89.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0025201612903225806,
+          "50": 0.012600806451612902,
+          "100": 0.025201612903225805
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_006",
+      "query": "List CVEs classified as CWE-89.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0025201612903225806,
+          "50": 0.012600806451612902,
+          "100": 0.025201612903225805
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_006",
+      "query": "Show vulnerabilities related to CWE-89.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0025201612903225806,
+          "50": 0.012600806451612902,
+          "100": 0.025201612903225805
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_006",
+      "query": "Which CVEs have CWE-89?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0025201612903225806,
+          "50": 0.012600806451612902,
+          "100": 0.025201612903225805
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_cwe_006",
+      "query": "Search for vulnerabilities with CWE-89.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0025201612903225806,
+          "50": 0.012600806451612902,
+          "100": 0.025201612903225805
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 1.0,
+          "100": 1.0
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9999999999999999,
+          "100": 1.0000000000000004
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_001",
+      "query": "Show critical vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.004424778761061947,
+          "100": 0.004424778761061947
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.02,
+          "100": 0.01
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.017939448623110175,
+          "100": 0.011050281775237324
+        },
+        "reciprocal_rank": 0.05263157894736842
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_001",
+      "query": "Find vulnerabilities with critical severity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.008849557522123894,
+          "50": 0.030973451327433628,
+          "100": 0.061946902654867256
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.14,
+          "100": 0.14
+        },
+        "ndcg": {
+          "10": 0.2051166673279436,
+          "50": 0.15491046022176808,
+          "100": 0.14945721259491485
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_001",
+      "query": "List all critical CVEs.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.004424778761061947,
+          "100": 0.004424778761061947
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.02,
+          "100": 0.01
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.017386297995236586,
+          "100": 0.010709553894990308
+        },
+        "reciprocal_rank": 0.047619047619047616
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_001",
+      "query": "Search for critical security vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.0
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.0
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.0
+        },
+        "reciprocal_rank": 0.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_001",
+      "query": "Which vulnerabilities are rated critical?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.004424778761061947,
+          "50": 0.004424778761061947,
+          "100": 0.008849557522123894
+        },
+        "precision": {
+          "10": 0.1,
+          "50": 0.02,
+          "100": 0.02
+        },
+        "ndcg": {
+          "10": 0.13886244387355454,
+          "50": 0.048917881007109545,
+          "100": 0.03745320067986727
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_002",
+      "query": "Show high severity vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000326619488296135,
+          "50": 0.0015968063872255488,
+          "100": 0.003012157503175467
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.88,
+          "100": 0.83
+        },
+        "ndcg": {
+          "10": 0.7799082337019199,
+          "50": 0.8346937317242091,
+          "100": 0.8142518812777929
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_002",
+      "query": "Find vulnerabilities with high severity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000326619488296135,
+          "50": 0.0015242242787152967,
+          "100": 0.0031573217201959717
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.84,
+          "100": 0.87
+        },
+        "ndcg": {
+          "10": 0.7799082337019199,
+          "50": 0.7986650228651406,
+          "100": 0.8372568592380611
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_002",
+      "query": "List all high severity CVEs.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000326619488296135,
+          "50": 0.0017782616585011795,
+          "100": 0.0035202322627472327
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.98,
+          "100": 0.97
+        },
+        "ndcg": {
+          "10": 0.9052116356304493,
+          "50": 0.9666083514034185,
+          "100": 0.9639250552590732
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_002",
+      "query": "Search for high risk vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002903284340410089,
+          "50": 0.0014153511159499183,
+          "100": 0.002322627472328071
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.78,
+          "100": 0.64
+        },
+        "ndcg": {
+          "10": 0.6851198693323691,
+          "50": 0.7446151195778069,
+          "100": 0.6522604644920261
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_002",
+      "query": "Which vulnerabilities are rated high?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000326619488296135,
+          "50": 0.0015968063872255488,
+          "100": 0.0031936127744510976
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.88,
+          "100": 0.88
+        },
+        "ndcg": {
+          "10": 0.8611375561264454,
+          "50": 0.8695306553304372,
+          "100": 0.8730348304320232
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_003",
+      "query": "Find network exploitable vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00017661915611367208,
+          "50": 0.0008301100337342588,
+          "100": 0.001607234320634416
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.94,
+          "100": 0.91
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9468921502152358,
+          "100": 0.9220838930940125
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_003",
+      "query": "Show vulnerabilities with attack vector NETWORK.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00017661915611367208,
+          "50": 0.0008654338649569933,
+          "100": 0.0016425581518571505
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.98,
+          "100": 0.93
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9859632230745619,
+          "100": 0.9441903474710522
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_003",
+      "query": "List remotely exploitable CVEs.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00015895724050230488,
+          "50": 0.0008301100337342588,
+          "100": 0.0016778819830798848
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.94,
+          "100": 0.95
+        },
+        "ndcg": {
+          "10": 0.8611375561264454,
+          "50": 0.9157513218383866,
+          "100": 0.9328063613579779
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_003",
+      "query": "Search for network attack vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00014129532489093766,
+          "50": 0.0007771242869001572,
+          "100": 0.001536586658188947
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.88,
+          "100": 0.87
+        },
+        "ndcg": {
+          "10": 0.7975167679274937,
+          "50": 0.8694348163369765,
+          "100": 0.8659946226239872
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_003",
+      "query": "Which vulnerabilities can be exploited over the network?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00017661915611367208,
+          "50": 0.0008654338649569933,
+          "100": 0.0016425581518571505
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.98,
+          "100": 0.93
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.984199157185123,
+          "100": 0.9431228514179496
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_004",
+      "query": "Find vulnerabilities with low attack complexity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00012366442421844084,
+          "50": 0.0009398496240601503,
+          "100": 0.0018055005935892362
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.76,
+          "100": 0.73
+        },
+        "ndcg": {
+          "10": 0.5988751049740155,
+          "50": 0.7440697209337758,
+          "100": 0.7262953325544934
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_004",
+      "query": "Show CVEs requiring low attack complexity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00019786307874950534,
+          "50": 0.0007667194301543332,
+          "100": 0.0015829046299960427
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.62,
+          "100": 0.64
+        },
+        "ndcg": {
+          "10": 0.6851198693323691,
+          "50": 0.6222308891487295,
+          "100": 0.6372138445135246
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_004",
+      "query": "List easy to exploit vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002225959635931935,
+          "50": 0.0009151167392164622,
+          "100": 0.0018796992481203006
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.74,
+          "100": 0.76
+        },
+        "ndcg": {
+          "10": 0.8611375561264454,
+          "50": 0.758223568559795,
+          "100": 0.7679038124468651
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_004",
+      "query": "Search for low complexity vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00017313019390581717,
+          "50": 0.0006430550059358923,
+          "100": 0.0014592402057776019
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.52,
+          "100": 0.59
+        },
+        "ndcg": {
+          "10": 0.7093753650484099,
+          "50": 0.5623179184427729,
+          "100": 0.6004741855872906
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_004",
+      "query": "Which vulnerabilities have low attack complexity?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002225959635931935,
+          "50": 0.0010635140482785912,
+          "100": 0.002077562326869806
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.86,
+          "100": 0.84
+        },
+        "ndcg": {
+          "10": 0.9216017310213247,
+          "50": 0.8792640477543756,
+          "100": 0.857211026505808
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_005",
+      "query": "Find vulnerabilities requiring no privileges.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00016195643371932951,
+          "50": 0.0007773908818527816,
+          "100": 0.0014414122601020326
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.96,
+          "100": 0.89
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9709152004006191,
+          "100": 0.9127437942241226
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_005",
+      "query": "Show CVEs with privileges required set to NONE.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0001295651469754636,
+          "50": 0.0004210867276702567,
+          "100": 0.0007773908818527816
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.52,
+          "100": 0.48
+        },
+        "ndcg": {
+          "10": 0.8165901947515999,
+          "50": 0.5836124702536095,
+          "100": 0.5291677188645569
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_005",
+      "query": "List vulnerabilities that require no privileges.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00014576079034739654,
+          "50": 0.0006964126649931169,
+          "100": 0.001311847113126569
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.86,
+          "100": 0.81
+        },
+        "ndcg": {
+          "10": 0.8899541168509599,
+          "50": 0.8640239369226689,
+          "100": 0.8215862878507938
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_005",
+      "query": "Search for privilege-free vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00016195643371932951,
+          "50": 0.0007773908818527816,
+          "100": 0.0014899991902178314
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.96,
+          "100": 0.92
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9683229570080825,
+          "100": 0.9346725839434221
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_005",
+      "query": "Which vulnerabilities require no privileges?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00014576079034739654,
+          "50": 0.0006964126649931169,
+          "100": 0.0011984776095230383
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.86,
+          "100": 0.74
+        },
+        "ndcg": {
+          "10": 0.9052116356304493,
+          "50": 0.8731822882505226,
+          "100": 0.7751122918531608
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_006",
+      "query": "Find vulnerabilities with CVSS score at least 9.0.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00031962497336458556,
+          "50": 0.002130833155763904,
+          "100": 0.0036224163647986364
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.4,
+          "100": 0.34
+        },
+        "ndcg": {
+          "10": 0.43735247915031,
+          "50": 0.41836234582124154,
+          "100": 0.36488451818654816
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_006",
+      "query": "Show CVEs with CVSS score 9 or higher.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00031962497336458556,
+          "50": 0.0017046665246111229,
+          "100": 0.0030897080758576605
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.32,
+          "100": 0.29
+        },
+        "ndcg": {
+          "10": 0.3340514446642156,
+          "50": 0.3353264545926634,
+          "100": 0.3064817171296184
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_006",
+      "query": "List critical CVSS vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00010654165778819518,
+          "50": 0.0009588749200937567,
+          "100": 0.0014915832090347326
+        },
+        "precision": {
+          "10": 0.1,
+          "50": 0.18,
+          "100": 0.14
+        },
+        "ndcg": {
+          "10": 0.07336392209936005,
+          "50": 0.15954250796504282,
+          "100": 0.1364418812204999
+        },
+        "reciprocal_rank": 0.14285714285714285
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_006",
+      "query": "Search for vulnerabilities scoring at least 9.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00021308331557639036,
+          "50": 0.0013850415512465374,
+          "100": 0.002237374813552099
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.26,
+          "100": 0.21
+        },
+        "ndcg": {
+          "10": 0.17993148201117176,
+          "50": 0.24003871964265516,
+          "100": 0.20942387825846442
+        },
+        "reciprocal_rank": 0.25
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_006",
+      "query": "Which vulnerabilities have CVSS \u2265 9.0?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000532708288940976,
+          "50": 0.001065416577881952,
+          "100": 0.002343916471340294
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.2,
+          "100": 0.22
+        },
+        "ndcg": {
+          "10": 0.41388361500911724,
+          "50": 0.2198764485894495,
+          "100": 0.22712313544873533
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_007",
+      "query": "Show vulnerabilities published in 2005.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0011976047904191617,
+          "50": 0.0027944111776447107,
+          "100": 0.005988023952095809
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.28,
+          "100": 0.3
+        },
+        "ndcg": {
+          "10": 0.6569815082938864,
+          "50": 0.35455545038654895,
+          "100": 0.3409357857353213
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_007",
+      "query": "List CVEs from 2005.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0011976047904191617,
+          "50": 0.007984031936127744,
+          "100": 0.013972055888223553
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.8,
+          "100": 0.7
+        },
+        "ndcg": {
+          "10": 0.46474568322493615,
+          "50": 0.7106843177691238,
+          "100": 0.6723666006832859
+        },
+        "reciprocal_rank": 0.25
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_007",
+      "query": "Find vulnerabilities disclosed during 2005.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000998003992015968,
+          "50": 0.002594810379241517,
+          "100": 0.005189620758483034
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.26,
+          "100": 0.26
+        },
+        "ndcg": {
+          "10": 0.5513310624619329,
+          "50": 0.32971450592495355,
+          "100": 0.30178784056462626
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_007",
+      "query": "Search for 2005 security vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0005988023952095808,
+          "50": 0.0021956087824351296,
+          "100": 0.003992015968063872
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.22,
+          "100": 0.2
+        },
+        "ndcg": {
+          "10": 0.21819512777734998,
+          "50": 0.2001514556914916,
+          "100": 0.1922307937699236
+        },
+        "reciprocal_rank": 0.2
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_007",
+      "query": "Which CVEs were published in 2005?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.001996007984031936,
+          "50": 0.0093812375249501,
+          "100": 0.01716566866267465
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.94,
+          "100": 0.86
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9532883912647324,
+          "100": 0.8877086271262308
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_008",
+      "query": "Show vulnerabilities published in 2008.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0012358757062146894,
+          "50": 0.004413841807909605,
+          "100": 0.0072387005649717515
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.5,
+          "100": 0.41
+        },
+        "ndcg": {
+          "10": 0.5559026721867443,
+          "50": 0.4882623649580087,
+          "100": 0.4232788547154173
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_008",
+      "query": "List CVEs from 2008.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0007062146892655367,
+          "50": 0.00423728813559322,
+          "100": 0.007062146892655367
+        },
+        "precision": {
+          "10": 0.4,
+          "50": 0.48,
+          "100": 0.4
+        },
+        "ndcg": {
+          "10": 0.27770450256879337,
+          "50": 0.42175335943474457,
+          "100": 0.3821458133361629
+        },
+        "reciprocal_rank": 0.16666666666666666
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_008",
+      "query": "Find vulnerabilities disclosed during 2008.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.001059322033898305,
+          "50": 0.004060734463276836,
+          "100": 0.006885593220338983
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.46,
+          "100": 0.39
+        },
+        "ndcg": {
+          "10": 0.6785038377365556,
+          "50": 0.5159131266271003,
+          "100": 0.44288411988979837
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_008",
+      "query": "Search for 2008 security vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0005296610169491525,
+          "50": 0.0014124293785310734,
+          "100": 0.0031779661016949155
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.16,
+          "100": 0.18
+        },
+        "ndcg": {
+          "10": 0.40002324830925196,
+          "50": 0.23180722692384784,
+          "100": 0.21910457801578462
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_008",
+      "query": "Which CVEs were published in 2008?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0012358757062146894,
+          "50": 0.004413841807909605,
+          "100": 0.00759180790960452
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.5,
+          "100": 0.43
+        },
+        "ndcg": {
+          "10": 0.681660451040628,
+          "50": 0.527954637187733,
+          "100": 0.4654467068011593
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_009",
+      "query": "Show vulnerabilities published in 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00042854081851296334,
+          "50": 0.002142704092564817,
+          "100": 0.004713949003642597
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.2,
+          "100": 0.22
+        },
+        "ndcg": {
+          "10": 0.22400556151517553,
+          "50": 0.20652369497352763,
+          "100": 0.21784145242700298
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_009",
+      "query": "List CVEs from 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00042854081851296334,
+          "50": 0.0025712449110777804,
+          "100": 0.004713949003642597
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.24,
+          "100": 0.22
+        },
+        "ndcg": {
+          "10": 0.13305201013572898,
+          "50": 0.2087188527092834,
+          "100": 0.20398323275046062
+        },
+        "reciprocal_rank": 0.125
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_009",
+      "query": "Find vulnerabilities disclosed during 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0006428112277694451,
+          "50": 0.001928433683308335,
+          "100": 0.004499678594386115
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.18,
+          "100": 0.21
+        },
+        "ndcg": {
+          "10": 0.24936270394794902,
+          "50": 0.17668184526237254,
+          "100": 0.20347966852362892
+        },
+        "reciprocal_rank": 0.25
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_009",
+      "query": "Search for 2010 security vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0008570816370259267,
+          "50": 0.0012856224555388902,
+          "100": 0.0025712449110777804
+        },
+        "precision": {
+          "10": 0.4,
+          "50": 0.12,
+          "100": 0.12
+        },
+        "ndcg": {
+          "10": 0.36670281837883434,
+          "50": 0.16020863937618704,
+          "100": 0.14312671175463662
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_009",
+      "query": "Which CVEs were published in 2010?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0014998928647953717,
+          "50": 0.0068566530962074134,
+          "100": 0.01135633169059353
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.64,
+          "100": 0.53
+        },
+        "ndcg": {
+          "10": 0.7421246259355073,
+          "50": 0.6730158300375146,
+          "100": 0.5749576509066796
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_010",
+      "query": "Show vulnerabilities published in 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00018688095683049897,
+          "50": 0.005045785834423472,
+          "100": 0.009717809755185946
+        },
+        "precision": {
+          "10": 0.1,
+          "50": 0.54,
+          "100": 0.52
+        },
+        "ndcg": {
+          "10": 0.06625422345438903,
+          "50": 0.4484229112292273,
+          "100": 0.46804102213757326
+        },
+        "reciprocal_rank": 0.1111111111111111
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_010",
+      "query": "List CVEs from 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0007475238273219959,
+          "50": 0.0037376191366099796,
+          "100": 0.007849000186880957
+        },
+        "precision": {
+          "10": 0.4,
+          "50": 0.4,
+          "100": 0.42
+        },
+        "ndcg": {
+          "10": 0.4447551423209717,
+          "50": 0.41948978113948365,
+          "100": 0.4276567091316624
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_010",
+      "query": "Find vulnerabilities disclosed during 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0009344047841524949,
+          "50": 0.005606428704914969,
+          "100": 0.009717809755185946
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.6,
+          "100": 0.52
+        },
+        "ndcg": {
+          "10": 0.3863474142462608,
+          "50": 0.5436597706398377,
+          "100": 0.5040110148504251
+        },
+        "reciprocal_rank": 0.25
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_010",
+      "query": "Search for 2012 security vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0009344047841524949,
+          "50": 0.0031769762661184825,
+          "100": 0.005980190618575967
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.34,
+          "100": 0.32
+        },
+        "ndcg": {
+          "10": 0.41388361500911724,
+          "50": 0.3488013646590987,
+          "100": 0.32809984298123546
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_010",
+      "query": "Which CVEs were published in 2012?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0014950476546439918,
+          "50": 0.006540833489067464,
+          "100": 0.012334143150812932
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.7,
+          "100": 0.66
+        },
+        "ndcg": {
+          "10": 0.7877736340270854,
+          "50": 0.7106738335036822,
+          "100": 0.6754182916388386
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_011",
+      "query": "Show vulnerabilities published after 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0001812250815512867,
+          "50": 0.0008336353751359189,
+          "100": 0.0017760057992026097
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.46,
+          "100": 0.49
+        },
+        "ndcg": {
+          "10": 0.5957616317188126,
+          "50": 0.5055168676733206,
+          "100": 0.5123568048339628
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_011",
+      "query": "Find CVEs published since 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00025371511417180136,
+          "50": 0.0014135556361000363,
+          "100": 0.002682131206959043
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.78,
+          "100": 0.74
+        },
+        "ndcg": {
+          "10": 0.7100226348397882,
+          "50": 0.769578310534601,
+          "100": 0.7422683685065385
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_011",
+      "query": "List vulnerabilities released after January 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 7.249003262051468e-05,
+          "50": 0.0005436752446538601,
+          "100": 0.0013410656034795216
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.3,
+          "100": 0.37
+        },
+        "ndcg": {
+          "10": 0.2984900352767555,
+          "50": 0.32414431096811397,
+          "100": 0.3699913709251331
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_011",
+      "query": "Search for recent vulnerabilities after 2010.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00021747009786154403,
+          "50": 0.0012685755708590069,
+          "100": 0.002645886190648786
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.7,
+          "100": 0.73
+        },
+        "ndcg": {
+          "10": 0.498250645792228,
+          "50": 0.6446188734465711,
+          "100": 0.6907841641095446
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_011",
+      "query": "Which CVEs were published after 2010?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00025371511417180136,
+          "50": 0.0014135556361000363,
+          "100": 0.002682131206959043
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.78,
+          "100": 0.74
+        },
+        "ndcg": {
+          "10": 0.6812060741152737,
+          "50": 0.7632904275837196,
+          "100": 0.7384878399536873
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_012",
+      "query": "Show vulnerabilities published after 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000319982934243507,
+          "50": 0.0017599061383392885,
+          "100": 0.0032531598314756546
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.66,
+          "100": 0.61
+        },
+        "ndcg": {
+          "10": 0.587550286357109,
+          "50": 0.6353690551801139,
+          "100": 0.6059698508262377
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_012",
+      "query": "Find CVEs published since 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000426643912324676,
+          "50": 0.0021865500506639646,
+          "100": 0.004693083035571436
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.82,
+          "100": 0.88
+        },
+        "ndcg": {
+          "10": 0.8115558478722846,
+          "50": 0.8114642520219579,
+          "100": 0.8601793199698088
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_012",
+      "query": "List vulnerabilities released after January 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000106660978081169,
+          "50": 0.0004799744013652605,
+          "100": 0.0015465841821769505
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.18,
+          "100": 0.29
+        },
+        "ndcg": {
+          "10": 0.2984900352767555,
+          "50": 0.2223841246858682,
+          "100": 0.2919032524860874
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_012",
+      "query": "Search for vulnerabilities newer than 2012.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0003733134232840915,
+          "50": 0.0010132792917711055,
+          "100": 0.0021865500506639646
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.38,
+          "100": 0.41
+        },
+        "ndcg": {
+          "10": 0.5716145678915879,
+          "50": 0.40076469677206594,
+          "100": 0.4159077512224191
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_012",
+      "query": "Which CVEs were published after 2012?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.000426643912324676,
+          "50": 0.0024532024958668873,
+          "100": 0.004746413524612021
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.92,
+          "100": 0.89
+        },
+        "ndcg": {
+          "10": 0.8165901947515999,
+          "50": 0.9015855953801821,
+          "100": 0.8862075473436923
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_013",
+      "query": "Find vulnerabilities with CVSS score at least 7.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00017997912242179908,
+          "50": 0.0009358914365933552,
+          "100": 0.001727799575249271
+        },
+        "precision": {
+          "10": 0.5,
+          "50": 0.52,
+          "100": 0.48
+        },
+        "ndcg": {
+          "10": 0.6274092458891772,
+          "50": 0.5726804313418867,
+          "100": 0.52128804421303
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_013",
+      "query": "Show CVEs with CVSS 7 or higher.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002519707713905187,
+          "50": 0.0013318455059213132,
+          "100": 0.002447716064936467
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.74,
+          "100": 0.68
+        },
+        "ndcg": {
+          "10": 0.7385567757549499,
+          "50": 0.7449019301665412,
+          "100": 0.6957948545111717
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_013",
+      "query": "List high impact vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002159749469061589,
+          "50": 0.0012958496814369533,
+          "100": 0.0028796659587487852
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.72,
+          "100": 0.8
+        },
+        "ndcg": {
+          "10": 0.6871952210980248,
+          "50": 0.7318443980476794,
+          "100": 0.7894197118416096
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_013",
+      "query": "Search for vulnerabilities scoring at least 7.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002159749469061589,
+          "50": 0.0011518663834995141,
+          "100": 0.002267736942514668
+        },
+        "precision": {
+          "10": 0.6,
+          "50": 0.64,
+          "100": 0.63
+        },
+        "ndcg": {
+          "10": 0.6901935063354876,
+          "50": 0.6642979099364367,
+          "100": 0.6468985582963785
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_013",
+      "query": "Which vulnerabilities have CVSS \u2265 7?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002519707713905187,
+          "50": 0.0012958496814369533,
+          "100": 0.002555703538389547
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.72,
+          "100": 0.71
+        },
+        "ndcg": {
+          "10": 0.7538142945344393,
+          "50": 0.7360436543559098,
+          "100": 0.7222916628338744
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_014",
+      "query": "Find vulnerabilities with CVSS score at least 5.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00016143678740793057,
+          "50": 0.0007264655433356877,
+          "100": 0.001493290283523358
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.72,
+          "100": 0.74
+        },
+        "ndcg": {
+          "10": 0.804810999209339,
+          "50": 0.7326759277731595,
+          "100": 0.7438517863124599
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_014",
+      "query": "Show CVEs with CVSS 5 or higher.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00016143678740793057,
+          "50": 0.000746645141761679,
+          "100": 0.001311673897689436
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.74,
+          "100": 0.65
+        },
+        "ndcg": {
+          "10": 0.8165901947515999,
+          "50": 0.7583713814774847,
+          "100": 0.6801639770171848
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_014",
+      "query": "List medium or higher severity vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00016143678740793057,
+          "50": 0.0007870043386136616,
+          "100": 0.0015538290788013318
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.78,
+          "100": 0.77
+        },
+        "ndcg": {
+          "10": 0.7162874455029682,
+          "50": 0.7556965119063256,
+          "100": 0.7573086720824613
+        },
+        "reciprocal_rank": 0.5
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_014",
+      "query": "Search for vulnerabilities scoring at least 5.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00014125718898193925,
+          "50": 0.000746645141761679,
+          "100": 0.0015740086772273233
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.74,
+          "100": 0.78
+        },
+        "ndcg": {
+          "10": 0.7967610662472993,
+          "50": 0.7704359141119739,
+          "100": 0.7893257309570649
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_014",
+      "query": "Which vulnerabilities have CVSS \u2265 5?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00014125718898193925,
+          "50": 0.0007668247401876703,
+          "100": 0.0014529310866713753
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.76,
+          "100": 0.72
+        },
+        "ndcg": {
+          "10": 0.7218018303820491,
+          "50": 0.7676317796019865,
+          "100": 0.7359152355721474
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_015",
+      "query": "Find locally exploitable vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0008206330597889801,
+          "50": 0.003634232121922626,
+          "100": 0.006330597889800703
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.62,
+          "100": 0.54
+        },
+        "ndcg": {
+          "10": 0.7529694065526482,
+          "50": 0.659757486055156,
+          "100": 0.5843305695909199
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_015",
+      "query": "Show vulnerabilities with attack vector LOCAL.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00035169988276670573,
+          "50": 0.0021101992966002345,
+          "100": 0.004806565064478312
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.36,
+          "100": 0.41
+        },
+        "ndcg": {
+          "10": 0.38113435412202,
+          "50": 0.3786515237971613,
+          "100": 0.4074798855571544
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_015",
+      "query": "List CVEs requiring local access.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00035169988276670573,
+          "50": 0.0023446658851113715,
+          "100": 0.006330597889800703
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.4,
+          "100": 0.54
+        },
+        "ndcg": {
+          "10": 0.36211082347570717,
+          "50": 0.3889661210189506,
+          "100": 0.5006447073143689
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_015",
+      "query": "Search for local attack vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0011723329425556857,
+          "50": 0.005509964830011723,
+          "100": 0.009378663540445486
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.94,
+          "100": 0.8
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9510288503021362,
+          "100": 0.8383529439374979
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_015",
+      "query": "Which vulnerabilities use a local attack vector?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00035169988276670573,
+          "50": 0.002579132473622509,
+          "100": 0.005158264947245018
+        },
+        "precision": {
+          "10": 0.3,
+          "50": 0.44,
+          "100": 0.44
+        },
+        "ndcg": {
+          "10": 0.3531437764338092,
+          "50": 0.4317989848301369,
+          "100": 0.4370372150382615
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_016",
+      "query": "Find vulnerabilities with high attack complexity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00032310177705977385,
+          "50": 0.002261712439418417,
+          "100": 0.003554119547657512
+        },
+        "precision": {
+          "10": 0.1,
+          "50": 0.14,
+          "100": 0.11
+        },
+        "ndcg": {
+          "10": 0.07839826897867533,
+          "50": 0.1326543184371838,
+          "100": 0.11196772427762924
+        },
+        "reciprocal_rank": 0.16666666666666666
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_016",
+      "query": "Show CVEs requiring high attack complexity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.00032310177705977385,
+          "100": 0.0012924071082390954
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.02,
+          "100": 0.04
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.014117822463755501,
+          "100": 0.03292315082268329
+        },
+        "reciprocal_rank": 0.022727272727272728
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_016",
+      "query": "List difficult to exploit vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.0006462035541195477,
+          "100": 0.0016155088852988692
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.04,
+          "100": 0.05
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.034557921266212585,
+          "100": 0.044874597381847375
+        },
+        "reciprocal_rank": 0.05555555555555555
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_016",
+      "query": "Search for high attack complexity CVEs.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0006462035541195477,
+          "50": 0.0016155088852988692,
+          "100": 0.002261712439418417
+        },
+        "precision": {
+          "10": 0.2,
+          "50": 0.1,
+          "100": 0.07
+        },
+        "ndcg": {
+          "10": 0.12987501165334076,
+          "50": 0.0919760803218063,
+          "100": 0.0722193622882469
+        },
+        "reciprocal_rank": 0.1111111111111111
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_016",
+      "query": "Which vulnerabilities have high attack complexity?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00032310177705977385,
+          "50": 0.0006462035541195477,
+          "100": 0.0012924071082390954
+        },
+        "precision": {
+          "10": 0.1,
+          "50": 0.04,
+          "100": 0.04
+        },
+        "ndcg": {
+          "10": 0.06943122193677727,
+          "50": 0.038747407896123943,
+          "100": 0.04007126998928696
+        },
+        "reciprocal_rank": 0.125
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_017",
+      "query": "Find vulnerabilities requiring low privileges.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.007380073800738007,
+          "100": 0.01107011070110701
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.04,
+          "100": 0.03
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.03158796081052448,
+          "100": 0.027011870498700637
+        },
+        "reciprocal_rank": 0.047619047619047616
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_017",
+      "query": "Show CVEs with privileges required set to LOW.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.01107011070110701,
+          "100": 0.01845018450184502
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.06,
+          "100": 0.05
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.05819693928215472,
+          "100": 0.050414443171945086
+        },
+        "reciprocal_rank": 0.07142857142857142
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_017",
+      "query": "List vulnerabilities requiring low privileges.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.007380073800738007
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.02
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.01615618715841141
+        },
+        "reciprocal_rank": 0.019230769230769232
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_017",
+      "query": "Search for low privilege vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.007380073800738007
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.02
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.015849940017216544
+        },
+        "reciprocal_rank": 0.019230769230769232
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_017",
+      "query": "Which vulnerabilities require low privileges?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.014760147601476014
+        },
+        "precision": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.04
+        },
+        "ndcg": {
+          "10": 0.0,
+          "50": 0.0,
+          "100": 0.030125561981373703
+        },
+        "reciprocal_rank": 0.014925373134328358
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_018",
+      "query": "Show medium severity vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.0002310536044362292,
+          "50": 0.0011841497227356747,
+          "100": 0.002397181146025878
+        },
+        "precision": {
+          "10": 0.8,
+          "50": 0.82,
+          "100": 0.83
+        },
+        "ndcg": {
+          "10": 0.8236998933965709,
+          "50": 0.8247398642805776,
+          "100": 0.8307881209757897
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_018",
+      "query": "Find vulnerabilities with medium severity.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00025993530499075784,
+          "50": 0.001241913123844732,
+          "100": 0.002454944547134935
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.86,
+          "100": 0.85
+        },
+        "ndcg": {
+          "10": 0.933745776545611,
+          "50": 0.8766196882761004,
+          "100": 0.8648850229604164
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_018",
+      "query": "List CVEs rated medium.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00020217190388170057,
+          "50": 0.0011263863216266173,
+          "100": 0.002397181146025878
+        },
+        "precision": {
+          "10": 0.7,
+          "50": 0.78,
+          "100": 0.83
+        },
+        "ndcg": {
+          "10": 0.5774250016294136,
+          "50": 0.7200498720679078,
+          "100": 0.7818089463074165
+        },
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_018",
+      "query": "Search for medium risk vulnerabilities.",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00025993530499075784,
+          "50": 0.0012707948243992607,
+          "100": 0.002483826247689464
+        },
+        "precision": {
+          "10": 0.9,
+          "50": 0.88,
+          "100": 0.86
+        },
+        "ndcg": {
+          "10": 0.9216017310213247,
+          "50": 0.8938278595452852,
+          "100": 0.8725750099054147
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    },
+    {
+      "scenario_id": "nvd_meta_018",
+      "query": "Which vulnerabilities are classified as medium severity?",
+      "ground_truth": [],
+      "retrieved": [],
+      "metrics": {
+        "recall": {
+          "10": 0.00028881700554528653,
+          "50": 0.0013863216266173752,
+          "100": 0.002801524953789279
+        },
+        "precision": {
+          "10": 1.0,
+          "50": 0.96,
+          "100": 0.97
+        },
+        "ndcg": {
+          "10": 1.0,
+          "50": 0.9659474754463411,
+          "100": 0.9712325780935674
+        },
+        "reciprocal_rank": 1.0
+      },
+      "bucket": "broad"
+    }
+  ],
+  "by_bucket": {
+    "narrow": {
+      "num_queries": 30,
+      "recall@10": 1.0,
+      "precision@10": 1.0,
+      "ndcg@10": 1.0,
+      "mrr": 1.0
+    },
+    "broad": {
+      "num_queries": 120,
+      "recall@10": 0.0074,
+      "precision@10": 0.6583,
+      "ndcg@10": 0.6562,
+      "mrr": 0.7625
+    }
+  }
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "scenario_id": "cve_001",
+    "queries": [
+      "What is CVE-2021-44228?",
+      "Explain CVE-2021-44228.",
+      "Show details for CVE-2021-44228.",
+      "Tell me about vulnerability CVE-2021-44228.",
+      "Give information about CVE-2021-44228."
+    ]
+  },
+  {
+    "scenario_id": "cve_002",
+    "queries": [
+      "What is CVE-2021-3156?",
+      "Explain CVE-2021-3156.",
+      "Show details for CVE-2021-3156.",
+      "Tell me about vulnerability CVE-2021-3156.",
+      "Give information about CVE-2021-3156."
+    ]
+  },
+  {
+    "scenario_id": "cve_003",
+    "queries": [
+      "What is CVE-2023-23397?",
+      "Explain CVE-2023-23397.",
+      "Show details for CVE-2023-23397.",
+      "Tell me about vulnerability CVE-2023-23397.",
+      "Give information about CVE-2023-23397."
+    ]
+  },
+  {
+    "scenario_id": "cve_004",
+    "queries": [
+      "What is CVE-2024-3400?",
+      "Explain CVE-2024-3400.",
+      "Show details for CVE-2024-3400.",
+      "Tell me about vulnerability CVE-2024-3400.",
+      "Give information about CVE-2024-3400."
+    ]
+  },
+  {
+    "scenario_id": "cve_005",
+    "queries": [
+      "What is CVE-2023-3519?",
+      "Explain CVE-2023-3519.",
+      "Show details for CVE-2023-3519.",
+      "Tell me about vulnerability CVE-2023-3519.",
+      "Give information about CVE-2023-3519."
+    ]
+  },
+  {
+    "scenario_id": "cve_006",
+    "queries": [
+      "What is CVE-2023-4966?",
+      "Explain CVE-2023-4966.",
+      "Show details for CVE-2023-4966.",
+      "Tell me about vulnerability CVE-2023-4966.",
+      "Give information about CVE-2023-4966."
+    ]
+  },
+
+  {
+    "scenario_id": "vendor_001",
+    "queries": [
+      "Show Microsoft vulnerabilities.",
+      "Find vulnerabilities affecting Microsoft products.",
+      "List Microsoft CVEs.",
+      "Search for Microsoft security vulnerabilities.",
+      "What vulnerabilities affect Microsoft?"
+    ]
+  },
+  {
+    "scenario_id": "vendor_002",
+    "queries": [
+      "Show Cisco vulnerabilities.",
+      "Find vulnerabilities affecting Cisco products.",
+      "List Cisco CVEs.",
+      "Search for Cisco security vulnerabilities.",
+      "What vulnerabilities affect Cisco?"
+    ]
+  },
+  {
+    "scenario_id": "vendor_003",
+    "queries": [
+      "Show Apple vulnerabilities.",
+      "Find vulnerabilities affecting Apple products.",
+      "List Apple CVEs.",
+      "Search for Apple security vulnerabilities.",
+      "What vulnerabilities affect Apple?"
+    ]
+  },
+  {
+    "scenario_id": "vendor_004",
+    "queries": [
+      "Show Adobe vulnerabilities.",
+      "Find vulnerabilities affecting Adobe products.",
+      "List Adobe CVEs.",
+      "Search for Adobe security vulnerabilities.",
+      "What vulnerabilities affect Adobe?"
+    ]
+  },
+  {
+    "scenario_id": "vendor_005",
+    "queries": [
+      "Show Google vulnerabilities.",
+      "Find vulnerabilities affecting Google products.",
+      "List Google CVEs.",
+      "Search for Google security vulnerabilities.",
+      "What vulnerabilities affect Google?"
+    ]
+  },
+  {
+    "scenario_id": "vendor_006",
+    "queries": [
+      "Show Apache vulnerabilities.",
+      "Find vulnerabilities affecting Apache products.",
+      "List Apache CVEs.",
+      "Search for Apache security vulnerabilities.",
+      "What vulnerabilities affect Apache?"
+    ]
+  },
+
+  {
+    "scenario_id": "product_001",
+    "queries": [
+      "Show Microsoft Windows vulnerabilities.",
+      "Find CVEs affecting Windows.",
+      "List Windows security vulnerabilities.",
+      "Search for Microsoft Windows CVEs.",
+      "What vulnerabilities affect Windows?"
+    ]
+  },
+  {
+    "scenario_id": "product_002",
+    "queries": [
+      "Show Microsoft Exchange Server vulnerabilities.",
+      "Find CVEs affecting Exchange Server.",
+      "List Exchange Server security vulnerabilities.",
+      "Search for Exchange Server CVEs.",
+      "What vulnerabilities affect Exchange Server?"
+    ]
+  },
+  {
+    "scenario_id": "product_003",
+    "queries": [
+      "Show Oracle WebLogic Server vulnerabilities.",
+      "Find CVEs affecting WebLogic Server.",
+      "List WebLogic Server security vulnerabilities.",
+      "Search for Oracle WebLogic CVEs.",
+      "What vulnerabilities affect WebLogic Server?"
+    ]
+  },
+  {
+    "scenario_id": "product_004",
+    "queries": [
+      "Show Adobe Flash Player vulnerabilities.",
+      "Find CVEs affecting Flash Player.",
+      "List Flash Player security vulnerabilities.",
+      "Search for Adobe Flash CVEs.",
+      "What vulnerabilities affect Flash Player?"
+    ]
+  },
+  {
+    "scenario_id": "product_005",
+    "queries": [
+      "Show Cisco IOS XE Software vulnerabilities.",
+      "Find CVEs affecting Cisco IOS XE Software.",
+      "List Cisco IOS XE vulnerabilities.",
+      "Search for Cisco IOS XE CVEs.",
+      "What vulnerabilities affect Cisco IOS XE Software?"
+    ]
+  },
+  {
+    "scenario_id": "product_006",
+    "queries": [
+      "Show VMware vCenter Server vulnerabilities.",
+      "Find CVEs affecting vCenter Server.",
+      "List VMware vCenter vulnerabilities.",
+      "Search for vCenter Server CVEs.",
+      "What vulnerabilities affect VMware vCenter Server?"
+    ]
+  },
+
+  {
+    "scenario_id": "cwe_001",
+    "queries": [
+      "Find vulnerabilities associated with CWE-787.",
+      "List CVEs classified as CWE-787.",
+      "Show vulnerabilities related to CWE-787.",
+      "Which CVEs have CWE-787?",
+      "Search for vulnerabilities with CWE-787."
+    ]
+  },
+  {
+    "scenario_id": "cwe_002",
+    "queries": [
+      "Find vulnerabilities associated with CWE-78.",
+      "List CVEs classified as CWE-78.",
+      "Show vulnerabilities related to CWE-78.",
+      "Which CVEs have CWE-78?",
+      "Search for vulnerabilities with CWE-78."
+    ]
+  },
+  {
+    "scenario_id": "cwe_003",
+    "queries": [
+      "Find vulnerabilities associated with CWE-20.",
+      "List CVEs classified as CWE-20.",
+      "Show vulnerabilities related to CWE-20.",
+      "Which CVEs have CWE-20?",
+      "Search for vulnerabilities with CWE-20."
+    ]
+  },
+  {
+    "scenario_id": "cwe_004",
+    "queries": [
+      "Find vulnerabilities associated with CWE-416.",
+      "List CVEs classified as CWE-416.",
+      "Show vulnerabilities related to CWE-416.",
+      "Which CVEs have CWE-416?",
+      "Search for vulnerabilities with CWE-416."
+    ]
+  },
+  {
+    "scenario_id": "cwe_005",
+    "queries": [
+      "Find vulnerabilities associated with CWE-79.",
+      "List CVEs classified as CWE-79.",
+      "Show vulnerabilities related to CWE-79.",
+      "Which CVEs have CWE-79?",
+      "Search for vulnerabilities with CWE-79."
+    ]
+  },
+  {
+    "scenario_id": "cwe_006",
+    "queries": [
+      "Find vulnerabilities associated with CWE-89.",
+      "List CVEs classified as CWE-89.",
+      "Show vulnerabilities related to CWE-89.",
+      "Which CVEs have CWE-89?",
+      "Search for vulnerabilities with CWE-89."
+    ]
+  },
+
+  {
+    "scenario_id": "meta_001",
+    "queries": [
+      "Show vulnerabilities published in 2025.",
+      "Find CVEs published during 2025.",
+      "List 2025 vulnerabilities.",
+      "Search for vulnerabilities from 2025.",
+      "Which CVEs were published in 2025?"
+    ]
+  },
+  {
+    "scenario_id": "meta_002",
+    "queries": [
+      "Show vulnerabilities published in 2024.",
+      "Find CVEs published during 2024.",
+      "List 2024 vulnerabilities.",
+      "Search for vulnerabilities from 2024.",
+      "Which CVEs were published in 2024?"
+    ]
+  },
+  {
+    "scenario_id": "meta_003",
+    "queries": [
+      "Show vulnerabilities published after 2023.",
+      "Find CVEs published since 2023.",
+      "List vulnerabilities released after January 2023.",
+      "Search for recent vulnerabilities after 2023.",
+      "Which CVEs were published after 2023?"
+    ]
+  },
+  {
+    "scenario_id": "meta_004",
+    "queries": [
+      "Show vulnerabilities known to be used in ransomware attacks.",
+      "Find CVEs with known ransomware use.",
+      "List ransomware-related vulnerabilities.",
+      "Search for vulnerabilities exploited by ransomware.",
+      "Which vulnerabilities have known ransomware use?"
+    ]
+  },
+  {
+    "scenario_id": "meta_005",
+    "queries": [
+      "Show vulnerabilities with due dates before 2023.",
+      "Find CVEs that had remediation deadlines before 2023.",
+      "List vulnerabilities due before 2023.",
+      "Search for vulnerabilities with early due dates.",
+      "Which vulnerabilities had due dates before January 2023?"
+    ]
+  },
+  {
+    "scenario_id": "meta_006",
+    "queries": [
+      "Show vulnerabilities that require applying updates.",
+      "Find CVEs whose required action is to apply updates.",
+      "List vulnerabilities with update recommendations.",
+      "Search for vulnerabilities requiring software updates.",
+      "Which vulnerabilities recommend applying updates?"
+    ]
+  }
+]

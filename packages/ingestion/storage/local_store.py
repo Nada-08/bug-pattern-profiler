@@ -28,3 +28,11 @@ def load_jsonl(path: Path) -> list[dict]:
             records.append(json.loads(line))
 
         return records
+
+
+def load_values(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+
+    with path.open("r", encoding="utf-8") as handle:
+        return [line.strip() for line in handle if line.strip()]

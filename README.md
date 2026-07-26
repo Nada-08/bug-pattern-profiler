@@ -1,302 +1,158 @@
 # Bug Pattern Profiler
 
-**Bug Pattern Profiler** is a cybersecurity-focused Retrieval-Augmented Generation (RAG) system that enables semantic search and AI-assisted analysis over real-world vulnerability intelligence.
+Bug Pattern Profiler is a cybersecurity Retrieval-Augmented Generation (RAG) project for exploring vulnerability intelligence from the National Vulnerability Database (NVD) and CISA's Known Exploited Vulnerabilities (KEV) catalog.
 
-Modern cybersecurity teams rely on multiple public vulnerability databases, but these sources serve different purposes and are difficult to explore using traditional keyword search. The **National Vulnerability Database (NVD)** provides comprehensive technical information about publicly disclosed vulnerabilities, including CVSS scores, CWE mappings, affected products, and attack characteristics. The **CISA Known Exploited Vulnerabilities (KEV) Catalog** is a curated list of vulnerabilities that are actively exploited in the wild, helping organizations prioritize remediation based on real-world threats.
+It builds NVD, KEV, and fused KEV+NVD document collections, indexes their enriched vulnerability metadata in Pinecone, retrieves relevant CVEs from natural-language queries, and can generate a grounded analysis with Groq.
 
-Bug Pattern Profiler combines these complementary sources into a unified knowledge base. It ingests, normalizes, enriches, and indexes vulnerability data to enable semantic retrieval and grounded AI-generated cybersecurity analysis. Rather than functioning as a general-purpose chatbot, the system is designed to help users explore vulnerability patterns, understand security risks, and retrieve relevant threat intelligence using natural language.
+## Implemented
 
-## Project Goals
+- Fetch, normalize, and store NVD CVE and CISA KEV records locally.
+- Fuse KEV exploitation information with matching NVD technical metadata.
+- Create metadata-preserving retrieval chunks (currently one enriched chunk per vulnerability document).
+- Embed chunks with `BAAI/bge-small-en-v1.5` and upsert them to Pinecone namespaces.
+- Run dense semantic search and map matches to structured `SearchResult` objects.
+- Normalize common CVE/CWE query formats and extract CVE IDs, CWE IDs, and publication dates.
+- Apply Pinecone metadata filters for explicitly requested CVE or CWE identifiers.
+- Resolve likely vendor and product mentions against a locally built corpus vocabulary; the resolved values are captured for query analysis, while vendor/product filtering is not enabled yet.
+- Generate grounded, JSON-shaped vulnerability analysis from retrieved context through Groq.
+- Evaluate retrieval against checked-in NVD and fused-corpus benchmarks, reporting Recall, Precision, nDCG, MRR, and R-Precision at configured cutoffs.
+- Profile corpus metadata and write timestamped retrieval-evaluation reports.
 
-The project aims to:
+## Architecture
 
-* Aggregate vulnerability intelligence from authoritative cybersecurity sources.
-* Combine NVD's technical vulnerability data with CISA KEV's exploitation intelligence into a unified retrieval corpus.
-* Enable semantic search over vulnerability records instead of relying solely on keyword matching.
-* Generate grounded AI-assisted vulnerability analysis using retrieved evidence.
-* Provide a modular foundation for advanced retrieval techniques such as hybrid search, reranking, metadata filtering, and retrieval evaluation.
-
-## What's Complete
-
-### Data Ingestion Pipeline
-Implemented:
-- NVD CVE ingestion
-- CISA KEV ingestion
-- raw JSON storage
-- reusable ingestion pipeline
-
-Data sources are fetched and stored locally before normalization.
-
-### Normalization & Enrichment
-Implemented:
-- unified `NormalizedDocument` schema
-- cross-source schema normalization
-- metadata enrichment from NVD
-- KEV + NVD fusion pipeline
-
-Current enrichment fields include:
-- CVE ID
-- severity
-- CVSS score
-- attack vector
-- attack complexity
-- privileges required
-- exploitability score
-- impact score
-- CWE IDs
-- vendor/product metadata
-- publication dates
-- exploitation metadata
-
-### Chunking Pipeline
-Implemented:
-- document chunk schema
-- metadata-preserving chunk generation
-- chunk storage pipeline
-
-Current chunking strategy:
-- One vulnerability document = one enriched retrieval chunk
-
-### Retrieval System
-Implemented:
-- SentenceTransformers embeddings
-- Pinecone vector database integration
-- semantic similarity retrieval
-- namespace-aware retrieval
-- metadata-aware retrieval support
-- top-k ranked vulnerability retrieval
-
-Embedding model:
-- BAAI/bge-small-en-v1.5
-
-Vector database:
-- Pinecone serverless
-- cosine similarity
-- embedding dimension: 384
-
-### RAG Generation Pipeline
-Implemented:
-- grounded RAG workflow
-- Groq LLM integration
-- structured cybersecurity prompting
-- evidence-aware generation
-- JSON-formatted threat intelligence outputs
-
-Current pipeline:
-```
-query
-→ semantic retrieval
-→ context construction
-→ grounded LLM generation
-→ structured security analysis
+```text
+NVD CVE API + CISA KEV catalog
+             |
+   local raw JSON and normalization
+             |
+        KEV + NVD fusion
+             |
+     enriched retrieval chunks
+             |
+SentenceTransformers embeddings -> Pinecone (nvd / fused namespaces)
+             |
+query normalization, entity extraction, and CVE/CWE filtering
+             |
+semantic retrieval -> optional Groq grounded generation
 ```
 
-## Current Architecture
-```
-NVD API + CISA KEV
-        ↓
-Raw JSON ingestion
-        ↓
-Normalization
-        ↓
-KEV + NVD fusion
-        ↓
-Chunk generation
-        ↓
-Embedding generation
-        ↓
-Pinecone vector database
-        ↓
-Semantic retrieval
-        ↓
-Grounded RAG generation
-        ↓
-Structured vulnerability analysis
-```
+## Repository layout
 
-
-## Data Sources
-
-### National Vulnerability Database (NVD)
-Source: [NVD CVE API v2.0](https://services.nvd.nist.gov/rest/json/cves/2.0)
-
-Contains:
-- CVE descriptions
-- CVSS metrics
-- CWE mappings
-- attack metadata
-- references
-- vulnerability configurations
-
-### CISA Known Exploited Vulnerabilities (KEV)
-Source: [CISA KEV Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-
-Contains:
-- actively exploited vulnerabilities
-- remediation deadlines
-- exploitation metadata
-- operational security prioritization data
-
-### Data Pipeline Stages
-1. **Raw**: Original API responses stored as JSON
-2. **Normalized**: Unified schema with consistent field mapping
-3. **Chunked**: Text broken into semantic units (~500 char chunks) with metadata
-
-## Project Structure
-
-```
+```text
 packages/
-├── common/              # Shared settings and configuration
-├── ingestion/           # Data fetching and processing
-│   ├── sources/         # NVD and CISA KEV fetchers
-│   ├── normalize/       # Schema normalization and transformation
-│   ├── chunking/        # Document chunking for search
-│   ├── fusion/          # Cross-source data fusion
-│   ├── storage/         # Local file I/O utilities
-│   └── cli.py           # Main ingestion entry point
-├── retrieval/           # Search and embedding
-│   ├── embedder.py      # Text embedding service
-│   ├── search_service.py # Semantic search
-│   └── vector_store.py  # Pinecone integration
-├── generation/          # LLM answer generation
-│   ├── generation_service.py
-│   └── prompts.py       # System and user prompts
-├── rag/                 # End-to-end RAG orchestration
-│   └── rag_service.py   # Query → Search → Generate pipeline
-└── apps/                # Frontend and API applications
-
-data/
-├── raw/                 # Original API responses
-│   ├── nvd/
-│   └── cisa_kev/
-├── normalized/          # Unified schema documents
-├── chunks/              # Chunked text with metadata
-└── test/                # Sample data for testing
+  ingestion/       Source fetching, normalization, fusion, chunks, and local storage
+  retrieval/       Embeddings, Pinecone access, query parsing, filters, and result models
+  generation/      Groq client, prompts, and context formatting
+  rag/             End-to-end retrieval and generation service
+  evaluation/      Benchmarks, metrics, corpus analysis, and report models
+scripts/
+  upsert_fused.py                  Embed and upload a corpus to Pinecone
+  run_retrieval_evaluation.py      Evaluate nvd and fused namespaces
+  inspect_corpus_metadata.py       Create a metadata completeness profile
+  build_metadata_vocabulary.py     Build vendor/product vocabularies from chunks
+tests/             Normalization tests
+reports/retrieval/ Generated evaluation results
 ```
 
-## Installation
+`data/` is intentionally ignored: it holds downloaded source data, normalized documents, chunks, and local metadata vocabularies.
 
-### Prerequisites
-- Python 3.11+
-- Pinecone account
-- API Keys:
-  - `GROQ_API_KEY`: For LLM generation (https://console.groq.com)
-  - `PINECONE_API_KEY`: For vector search (https://www.pinecone.io)
+## Setup
 
-### Setup
+Requires Python 3.11+, a Pinecone index compatible with 384-dimensional cosine embeddings, and credentials for the services you use.
 
-```bash
-# Clone repository
-git clone <https://github.com/Nada-08/bug-pattern-profiler>
-cd bug-pattern-profiler
-
-# Install package and dependencies
+```powershell
 pip install -e .
-
-# Create .env file with API keys
-cat > .env << EOF
-GROQ_API_KEY=your_groq_api_key
-GROQ_MODEL=mixtral-8x7b-32768
-PINECONE_API_KEY=your_pinecone_api_key
-PINECONE_INDEX=bug-pattern-profiler
-PINECONE_ENVIRONMENT=gcp-starter
-EOF
 ```
 
-## Quick Start
+Create a `.env` file in the repository root:
 
-### 1. Ingest and Process Data
+```dotenv
+PINECONE_API_KEY=your_pinecone_key
+PINECONE_INDEX_NAME=bug-pattern-profiler
+GROQ_API_KEY=your_groq_key
+# Optional; defaults to llama3-70b-8192
+GROQ_MODEL=llama3-70b-8192
+# Optional: increases NVD API rate limits
+NVD_API_KEY=your_nvd_key
+```
 
-```bash
-# Fetch from APIs, normalize, chunk, and store locally
+The retrieval and evaluation code also imports `sentence-transformers`, `rapidfuzz`, `numpy`, and the RAG client uses `requests`; install them if they are not already present in your environment.
+
+## Run the pipeline
+
+The current ingestion entry point normalizes existing raw files, creates NVD and KEV chunks, fuses KEV with NVD, and creates fused chunks:
+
+```powershell
 make ingest-local
 ```
 
-### 2. Upsert to Vector Store
+Upload the fused chunks to Pinecone:
 
-```bash
-# Upload chunks to Pinecone for semantic search
+```powershell
 python scripts/upsert_fused.py
 ```
 
-### 3. Query with RAG
+The script is configured for the `fused` namespace. Its commented invocation shows how to upload the NVD collection to `nvd`.
+
+## Query with RAG
 
 ```python
 from packages.rag.rag_service import RAGService
 
 rag = RAGService()
-
-response = rag.answer(
-    query="What are the most critical CVE patterns in 2024?"
+result = rag.answer(
+    "What is CVE-2021-44228?",
+    namespace="fused",
 )
 
-print(response["answer"])
-print("Sources:", response["sources"])
+print(result["answer"])
+for source in result["sources"]:
+    print(source.cve_id, source.score)
 ```
 
-## Example Capabilities
-Example queries:
-```
-authentication bypass vulnerabilities
+Queries such as `cve202144228` and `CWE 79` are normalized before retrieval. Exact CVE and CWE references become Pinecone filters; other query terms continue through dense semantic retrieval.
+
+## Evaluate retrieval
+
+Run both checked-in benchmark suites:
+
+```powershell
+python scripts/run_retrieval_evaluation.py
 ```
 
-```
-remote code execution vulnerabilities
-```
+The evaluator runs `nvd` and `fused` namespaces at `@10`, `@50`, and `@100`, summarizes results by ground-truth size, and writes JSON reports under `reports/retrieval/`.
 
-```
-privilege escalation through file handling
-```
+### Evaluation snapshot
 
-```
-What are common patterns in authentication bypass vulnerabilities?
-```
+The latest recorded evaluation (2026-07-26; 150 queries per namespace) shows stronger top-10 retrieval on the fused KEV+NVD collection than on the NVD-only collection.
 
-## Current Limitations
-- Current NVD coverage is still partial and expanding
-- Hybrid retrieval (BM25 + vector search) is not implemented yet
-- Reranking is not implemented yet
-- Evaluation harness for retrieval quality is still under development
-- Some enrichment fields may be missing when matching NVD entries are unavailable
-- Current chunking strategy is intentionally simple
+| Namespace | Recall@10 | Precision@10 | nDCG@10 | MRR | R-Precision |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Fused KEV+NVD | 0.3632 | 0.8547 | 0.8562 | 0.8906 | 0.7183 |
+| NVD | 0.2059 | 0.7267 | 0.7250 | 0.8100 | 0.2588 |
 
-## Roadmap & Next Steps
+Key observations:
 
-### Phase 2: Retrieval Improvements
-Planned:
-- retrieval evaluation framework
-- hybrid retrieval (BM25 + dense retrieval)
-- reranking layer
-- improved chunking strategies
-- metadata filtering improvements
+- All six exact-CVE scenarios achieved perfect Recall@10, MRR, and R-Precision in both collections.
+- The fused collection was especially effective for narrow ground-truth queries: Recall@10 was 0.8724, Precision@10 was 0.9320, and MRR was 0.9900.
+- Broad queries show low Recall@10 (fused: 0.0234, NVD: 0.0002) because Recall@10 is capped at `10 / ground-truth size`, some scenarios match thousands of CVEs, so even perfect ranking can't score high. R-Precision (which scales the cutoff to ground-truth size) confirms fused broad queries retain reasonable ranking quality (0.2259), while NVD broad queries are genuinely weak (0.0022).
+- These results show good early-ranking quality for focused lookups, while motivating the planned metadata filters, hybrid retrieval, and reranking for broad discovery queries.
 
-### Phase 3: APIs & Applications
-Planned:
-- FastAPI backend
-- frontend dashboard
-- deployment pipeline
-- AWS infrastructure
+To inspect corpus metadata completeness:
 
-### Technology Stack
-### Core
-- Python
-- HTTPX
-
-### AI / Retrieval
-- SentenceTransformers
-- Pinecone
-- Groq LLM
-- RAG architecture
-
-### Models
-Embedding:
-```
-BAAI/bge-small-en-v1.5
+```powershell
+python scripts/inspect_corpus_metadata.py
 ```
 
-Generation: 
-```
-Llama-3.3-70b-versatile
-```
----
-**Status**: Active Development · **Last Updated**: 2026-05-07
+## Current limitations
+
+- Retrieval is dense vector search only; hybrid lexical retrieval and reranking are not implemented.
+- Only CVE and CWE metadata filters are active. The parser extracts additional attributes, but severity, vendor, product, date, CVSS, and KEV-specific filters remain disabled.
+- Vendor/product resolution requires local vocabulary files under `data/metadata/`; the vocabulary builder may need to be adjusted to produce the text-file format consumed by the resolver.
+- Data fetching for NVD is currently commented out in the ingestion CLI, so that entry point expects locally stored raw NVD JSON.
+- The package manifest does not yet declare every runtime dependency used by retrieval and generation.
+
+## Data sources
+
+- [NVD CVE API v2.0](https://services.nvd.nist.gov/rest/json/cves/2.0)
+- [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "cve_001",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2021-44228"
+    }
+  },
+  {
+    "id": "cve_002",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2021-3156"
+    }
+  },
+  {
+    "id": "cve_003",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2023-23397"
+    }
+  },
+  {
+    "id": "cve_004",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2024-3400"
+    }
+  },
+  {
+    "id": "cve_005",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2023-3519"
+    }
+  },
+  {
+    "id": "cve_006",
+    "type": "cve_lookup",
+    "filters": {
+      "cve_id": "CVE-2023-4966"
+    }
+  },
+
+  {
+    "id": "vendor_001",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "vendor_002",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Cisco"
+    }
+  },
+  {
+    "id": "vendor_003",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Apple"
+    }
+  },
+  {
+    "id": "vendor_004",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Adobe"
+    }
+  },
+  {
+    "id": "vendor_005",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Google"
+    }
+  },
+  {
+    "id": "vendor_006",
+    "type": "vendor",
+    "filters": {
+      "vendor": "Apache"
+    }
+  },
+
+  {
+    "id": "product_001",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "Microsoft",
+      "product": "Windows"
+    }
+  },
+  {
+    "id": "product_002",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "Microsoft",
+      "product": "Exchange Server"
+    }
+  },
+  {
+    "id": "product_003",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "Oracle",
+      "product": "WebLogic Server"
+    }
+  },
+  {
+    "id": "product_004",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "Adobe",
+      "product": "Flash Player"
+    }
+  },
+  {
+    "id": "product_005",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software"
+    }
+  },
+  {
+    "id": "product_006",
+    "type": "vendor_product",
+    "filters": {
+      "vendor": "VMware",
+      "product": "vCenter Server"
+    }
+  },
+
+  {
+    "id": "cwe_001",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-787"
+    }
+  },
+  {
+    "id": "cwe_002",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-78"
+    }
+  },
+  {
+    "id": "cwe_003",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-20"
+    }
+  },
+  {
+    "id": "cwe_004",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-416"
+    }
+  },
+  {
+    "id": "cwe_005",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-79"
+    }
+  },
+  {
+    "id": "cwe_006",
+    "type": "cwe",
+    "filters": {
+      "cwe_id": "CWE-89"
+    }
+  },
+
+  {
+    "id": "meta_001",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2025
+    }
+  },
+  {
+    "id": "meta_002",
+    "type": "published_year",
+    "filters": {
+      "published_year": 2024
+    }
+  },
+  {
+    "id": "meta_003",
+    "type": "published_after",
+    "filters": {
+      "published_after": "2023-01-01"
+    }
+  },
+  {
+    "id": "meta_004",
+    "type": "ransomware",
+    "filters": {
+      "known_ransomware_use": "Known"
+    }
+  },
+  {
+    "id": "meta_005",
+    "type": "due_date_before",
+    "filters": {
+      "due_date_before": "2023-01-01"
+    }
+  },
+  {
+    "id": "meta_006",
+    "type": "required_action",
+    "filters": {
+      "required_action_contains": "Apply updates"
+    }
+  }
+]

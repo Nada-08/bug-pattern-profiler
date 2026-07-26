@@ -1,0 +1,517 @@
+{
+  "namespace": "nvd",
+  "k": 10,
+  "num_queries": 20,
+  "created_at": "2026-07-25T20:19:54.266083",
+  "experiment_name": "baseline_dense",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "retrieval_method": "dense",
+  "summary": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0
+  },
+  "query_results": [
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "What is CVE-1999-0872?",
+      "ground_truth": [
+        "CVE-1999-0872"
+      ],
+      "retrieved": [
+        "CVE-2008-3545",
+        "CVE-2000-0298",
+        "CVE-2008-1853",
+        "CVE-2008-0212",
+        "CVE-2009-3840",
+        "CVE-1999-0637",
+        "CVE-2009-3103",
+        "CVE-1999-1108",
+        "CVE-2007-1765",
+        "CVE-1999-1362"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Explain CVE-1999-0872.",
+      "ground_truth": [
+        "CVE-1999-0872"
+      ],
+      "retrieved": [
+        "CVE-2008-3545",
+        "CVE-2008-1853",
+        "CVE-2009-1528",
+        "CVE-2007-0069",
+        "CVE-2008-0212",
+        "CVE-1999-1108",
+        "CVE-2005-3379",
+        "CVE-2009-1531",
+        "CVE-2008-2251",
+        "CVE-2004-0477"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Show details for CVE-1999-0872.",
+      "ground_truth": [
+        "CVE-1999-0872"
+      ],
+      "retrieved": [
+        "CVE-2008-3545",
+        "CVE-2008-1853",
+        "CVE-1999-1108",
+        "CVE-2000-0298",
+        "CVE-2008-0212",
+        "CVE-2007-4590",
+        "CVE-1999-0197",
+        "CVE-1999-0110",
+        "CVE-2013-3595",
+        "CVE-1999-0309"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Tell me about vulnerability CVE-1999-0872.",
+      "ground_truth": [
+        "CVE-1999-0872"
+      ],
+      "retrieved": [
+        "CVE-1999-1218",
+        "CVE-2000-0298",
+        "CVE-2009-2963",
+        "CVE-2008-3545",
+        "CVE-2005-3785",
+        "CVE-2008-5446",
+        "CVE-2007-4590",
+        "CVE-2007-0069",
+        "CVE-2012-4897",
+        "CVE-2002-0810"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_001",
+      "query": "Give information about CVE-1999-0872.",
+      "ground_truth": [
+        "CVE-1999-0872"
+      ],
+      "retrieved": [
+        "CVE-1999-1108",
+        "CVE-1999-0282",
+        "CVE-2007-4590",
+        "CVE-1999-0110",
+        "CVE-1999-0187",
+        "CVE-1999-1056",
+        "CVE-1999-0197",
+        "CVE-2006-5664",
+        "CVE-2000-0298",
+        "CVE-2008-1853"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "What is CVE-2004-2328?",
+      "ground_truth": [
+        "CVE-2004-2328"
+      ],
+      "retrieved": [
+        "CVE-2007-1765",
+        "CVE-2004-1495",
+        "CVE-2013-2558",
+        "CVE-1999-1362",
+        "CVE-2008-6819",
+        "CVE-2005-2124",
+        "CVE-2008-1735",
+        "CVE-2008-4682",
+        "CVE-2007-4360",
+        "CVE-2010-3097"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Explain CVE-2004-2328.",
+      "ground_truth": [
+        "CVE-2004-2328"
+      ],
+      "retrieved": [
+        "CVE-2005-2124",
+        "CVE-2007-1765",
+        "CVE-2008-1412",
+        "CVE-2008-4250",
+        "CVE-2006-5988",
+        "CVE-2008-1441",
+        "CVE-2002-0283",
+        "CVE-2008-4682",
+        "CVE-2013-5056",
+        "CVE-2009-4313"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Show details for CVE-2004-2328.",
+      "ground_truth": [
+        "CVE-2004-2328"
+      ],
+      "retrieved": [
+        "CVE-2005-1571",
+        "CVE-2006-2535",
+        "CVE-2008-3243",
+        "CVE-2005-2124",
+        "CVE-2004-0487",
+        "CVE-2007-1765",
+        "CVE-2007-4590",
+        "CVE-2005-1572",
+        "CVE-2011-4613",
+        "CVE-2012-0004"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Tell me about vulnerability CVE-2004-2328.",
+      "ground_truth": [
+        "CVE-2004-2328"
+      ],
+      "retrieved": [
+        "CVE-2009-2963",
+        "CVE-2012-5459",
+        "CVE-2005-1670",
+        "CVE-2006-5988",
+        "CVE-2008-5446",
+        "CVE-2007-1765",
+        "CVE-2008-1441",
+        "CVE-2005-2124",
+        "CVE-2004-1495",
+        "CVE-2007-4360"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_002",
+      "query": "Give information about CVE-2004-2328.",
+      "ground_truth": [
+        "CVE-2004-2328"
+      ],
+      "retrieved": [
+        "CVE-2007-4590",
+        "CVE-2008-1735",
+        "CVE-2014-9279",
+        "CVE-2012-5884",
+        "CVE-2008-1441",
+        "CVE-2008-1412",
+        "CVE-2008-6819",
+        "CVE-2008-3243",
+        "CVE-2012-4198",
+        "CVE-2000-1066"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "What is CVE-2007-6263?",
+      "ground_truth": [
+        "CVE-2007-6263"
+      ],
+      "retrieved": [
+        "CVE-2004-2378",
+        "CVE-2007-1765",
+        "CVE-2010-3903",
+        "CVE-2011-2471",
+        "CVE-2007-4593",
+        "CVE-2007-2415",
+        "CVE-2005-4456",
+        "CVE-2000-0139",
+        "CVE-2012-0013",
+        "CVE-2006-0794"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Explain CVE-2007-6263.",
+      "ground_truth": [
+        "CVE-2007-6263"
+      ],
+      "retrieved": [
+        "CVE-2004-2378",
+        "CVE-2014-1759",
+        "CVE-2007-1765",
+        "CVE-2006-3589",
+        "CVE-2012-0013",
+        "CVE-2007-0069",
+        "CVE-2007-2415",
+        "CVE-2005-1649",
+        "CVE-2007-2219",
+        "CVE-2006-3942"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Show details for CVE-2007-6263.",
+      "ground_truth": [
+        "CVE-2007-6263"
+      ],
+      "retrieved": [
+        "CVE-2007-0961",
+        "CVE-2007-4590",
+        "CVE-2005-1649",
+        "CVE-2006-2535",
+        "CVE-2011-2471",
+        "CVE-2007-4496",
+        "CVE-2007-1765",
+        "CVE-2007-0962",
+        "CVE-2010-0379",
+        "CVE-2006-3589"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Tell me about vulnerability CVE-2007-6263.",
+      "ground_truth": [
+        "CVE-2007-6263"
+      ],
+      "retrieved": [
+        "CVE-2006-3656",
+        "CVE-2007-4496",
+        "CVE-2007-1765",
+        "CVE-2009-4483",
+        "CVE-2009-2963",
+        "CVE-2007-4590",
+        "CVE-2011-2471",
+        "CVE-2006-1792",
+        "CVE-2004-2378",
+        "CVE-2005-4457"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_003",
+      "query": "Give information about CVE-2007-6263.",
+      "ground_truth": [
+        "CVE-2007-6263"
+      ],
+      "retrieved": [
+        "CVE-2007-4590",
+        "CVE-2006-3860",
+        "CVE-2007-6370",
+        "CVE-2007-5553",
+        "CVE-2007-1323",
+        "CVE-2007-5968",
+        "CVE-2004-2378",
+        "CVE-2008-0626",
+        "CVE-2007-4576",
+        "CVE-2007-5670"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "What is CVE-2009-2354?",
+      "ground_truth": [
+        "CVE-2009-2354"
+      ],
+      "retrieved": [
+        "CVE-2014-0490",
+        "CVE-2003-1325",
+        "CVE-2012-1435",
+        "CVE-2009-0021",
+        "CVE-2009-1295",
+        "CVE-1999-1362",
+        "CVE-2012-4363",
+        "CVE-2009-3885",
+        "CVE-2006-0745",
+        "CVE-2009-2505"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Explain CVE-2009-2354.",
+      "ground_truth": [
+        "CVE-2009-2354"
+      ],
+      "retrieved": [
+        "CVE-2006-0745",
+        "CVE-2007-1209",
+        "CVE-2005-2124",
+        "CVE-2009-0850",
+        "CVE-2012-0013",
+        "CVE-2006-3589",
+        "CVE-2006-5916",
+        "CVE-2009-1844",
+        "CVE-2014-3367",
+        "CVE-2008-2251"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Show details for CVE-2009-2354.",
+      "ground_truth": [
+        "CVE-2009-2354"
+      ],
+      "retrieved": [
+        "CVE-2002-0009",
+        "CVE-2014-0490",
+        "CVE-2006-0841",
+        "CVE-2009-0021",
+        "CVE-2007-4590",
+        "CVE-1999-0309",
+        "CVE-2005-1571",
+        "CVE-2011-4613",
+        "CVE-2001-1324",
+        "CVE-2006-0745"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Tell me about vulnerability CVE-2009-2354.",
+      "ground_truth": [
+        "CVE-2009-2354"
+      ],
+      "retrieved": [
+        "CVE-2010-3151",
+        "CVE-2012-5459",
+        "CVE-2014-0490",
+        "CVE-2009-2963",
+        "CVE-2000-0487",
+        "CVE-2010-5195",
+        "CVE-2010-3149",
+        "CVE-2010-5270",
+        "CVE-2000-0528",
+        "CVE-2012-4897"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    },
+    {
+      "scenario_id": "nvd_cve_004",
+      "query": "Give information about CVE-2009-2354.",
+      "ground_truth": [
+        "CVE-2009-2354"
+      ],
+      "retrieved": [
+        "CVE-2007-4590",
+        "CVE-2009-0795",
+        "CVE-2006-0745",
+        "CVE-2011-3616",
+        "CVE-2014-0490",
+        "CVE-2012-2349",
+        "CVE-2009-4481",
+        "CVE-2009-1295",
+        "CVE-2009-3610",
+        "CVE-2012-4669"
+      ],
+      "metrics": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0
+      }
+    }
+  ]
+}
