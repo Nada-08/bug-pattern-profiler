@@ -51,6 +51,7 @@ packages/
   rag/             End-to-end retrieval and generation service
   evaluation/      Benchmarks, metrics, corpus analysis, and report models
 apps/api/          FastAPI application, routers, dependencies, and response schemas
+frontend/          React + Vite cybersecurity assistant interface
 scripts/
   upsert_fused.py                  Embed and upload a corpus to Pinecone
   run_retrieval_evaluation.py      Evaluate nvd and fused namespaces
@@ -126,6 +127,27 @@ uvicorn apps.api.app.main:app --reload
 
 - `GET /health` returns the service status.
 - `POST /chat` accepts a JSON body such as `{"query": "What is CVE-2021-44228?", "top_k": 5}` and returns the generated answer with its sources.
+
+## Run the frontend
+
+The `frontend/` directory contains a React 18, TypeScript, Vite, Tailwind CSS interface for the CyberRAG assistant. It renders structured vulnerability findings, including priority-ranked CVEs, remediation actions, patterns, hallucination flags, and source records.
+
+Start the API first, then run the frontend in a second terminal:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Vite serves the UI locally and proxies `POST /chat` requests to the FastAPI service at `http://localhost:8000`. For a production build:
+
+```powershell
+cd frontend
+npm run build
+```
+
+The UI is responsive and has no persistent conversation store: New chat clears the active conversation.
 
 ## Evaluate retrieval
 

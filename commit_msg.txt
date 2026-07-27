@@ -1,11 +1,11 @@
-﻿feat: add reranked multi-source RAG API
+﻿feat(frontend): add CyberRAG assistant interface
 
-- add BGE cross-encoder reranking to retrieval results
-- merge NVD and fused namespace candidates by CVE before final ranking
-- use multi-source reranked retrieval in the RAG service
-- add FastAPI health and chat endpoints with request/response schemas
-- migrate settings loading to pydantic-settings and .env support
-- declare retrieval, API, embedding, and reranking dependencies
-- refresh retrieval evaluation reports for reranker experiments
-- update README with the architecture, API startup command, and latest metrics
-- remove the obsolete commit message file
+Add a responsive React/Vite frontend for the CyberRAG FastAPI service.
+
+- Build a dark cybersecurity chat experience with a compact sidebar and New chat action
+- Add query suggestions, loading progress, retryable API errors, and render error containment
+- Render structured responses as CVE cards, recommendations, patterns, hallucination flags, and source tables
+- Support string and array vendor/product values from generated CVE results
+- Add Vite /chat proxy configuration, Tailwind styling, Framer Motion transitions, and TypeScript API models
+- Document frontend installation, development, production build, and chat behavior
+- Ignore generated frontend dependencies and build artifacts

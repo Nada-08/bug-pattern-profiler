@@ -12,6 +12,13 @@ data/
 .DS_Store
 Thumbs.db
 
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
 README.pdf
 roadmap.md
 roadmap.pdf
