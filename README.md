@@ -149,6 +149,25 @@ npm run build
 
 The UI is responsive and has no persistent conversation store: New chat clears the active conversation.
 
+## Run with Docker
+
+Start the API and frontend together from the repository root:
+
+```powershell
+docker compose up --build
+```
+
+The frontend is available at `http://localhost:5173`, the API is available at `http://localhost:8000`, and the API documentation is at `http://localhost:8000/docs`. The frontend's `/chat` requests are proxied to the API service by Nginx.
+
+To run the stack in the background and stop it later:
+
+```powershell
+docker compose up --build -d
+docker compose down
+```
+
+The API container reads credentials and configuration from the root `.env` file. If an API container was started separately on port `8000`, stop it before running Compose.
+
 ## Evaluate retrieval
 
 Run both checked-in benchmark suites:
@@ -165,14 +184,14 @@ The latest recorded reranker evaluation (2026-07-27; 150 queries per namespace) 
 
 | Namespace | Recall@10 | Precision@10 | nDCG@10 | MRR | R-Precision |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Fused KEV+NVD | 0.3632 | 0.8547 | 0.8562 | 0.8906 | 0.7183 |
-| NVD | 0.2059 | 0.7267 | 0.7251 | 0.8100 | 0.2588 |
+| Fused KEV+NVD | 0.3642 | 0.8993 | 0.9050 | 0.9441 | 0.7410 |
+| NVD | 0.2066 | 0.8500 | 0.8542 | 0.9010 | 0.2600 |
 
 Key observations:
 
 - All six exact-CVE scenarios achieved perfect Recall@10, MRR, and R-Precision in both collections.
-- The fused collection was especially effective for narrow ground-truth queries: Recall@10 was 0.8724, Precision@10 was 0.9320, and MRR was 0.9900.
-- Broad queries show low Recall@10 (fused: 0.0234, NVD: 0.0002) because Recall@10 is capped at `10 / ground-truth size`, some scenarios match thousands of CVEs, so even perfect ranking can't score high. R-Precision (which scales the cutoff to ground-truth size) confirms fused broad queries retain reasonable ranking quality (0.2259), while NVD broad queries are genuinely weak (0.0022).
+- The fused collection was especially effective for narrow ground-truth queries: Recall@10 was 0.8683, Precision@10 was 0.9300, and MRR was 0.9750.
+- Broad queries show low Recall@10 (fused: 0.0300, NVD: 0.0003) because Recall@10 is capped at `10 / ground-truth size`, some scenarios match thousands of CVEs, so even perfect ranking can't score high. R-Precision (which scales the cutoff to ground-truth size) confirms fused broad queries retain reasonable ranking quality (0.2512), while NVD broad queries are genuinely weak (0.0027).
 - These results show good early-ranking quality for focused lookups, while motivating the planned metadata filters, hybrid retrieval, and reranking for broad discovery queries.
 
 To inspect corpus metadata completeness:

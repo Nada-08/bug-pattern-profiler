@@ -1,11 +1,10 @@
-﻿feat(frontend): add CyberRAG assistant interface
+﻿feat: containerize API and frontend services
 
 Add a responsive React/Vite frontend for the CyberRAG FastAPI service.
 
-- Build a dark cybersecurity chat experience with a compact sidebar and New chat action
-- Add query suggestions, loading progress, retryable API errors, and render error containment
-- Render structured responses as CVE cards, recommendations, patterns, hallucination flags, and source tables
-- Support string and array vendor/product values from generated CVE results
-- Add Vite /chat proxy configuration, Tailwind styling, Framer Motion transitions, and TypeScript API models
-- Document frontend installation, development, production build, and chat behavior
-- Ignore generated frontend dependencies and build artifacts
+- add a production Dockerfile for the FastAPI backend
+- add a multi-stage Dockerfile for the Vite frontend served by Nginx
+- proxy frontend chat requests to the API service
+- add root Docker Compose configuration for the full stack
+- document Docker build, startup, and shutdown workflows
+- refresh README retrieval metrics with new reranker results
