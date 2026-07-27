@@ -63,7 +63,7 @@ def evaluate_namespace(
 
 
 def main():
-    experiment_name = "regex_vendor_product_hybrid_retrieval_evaluation"
+    experiment_name = "reranker_hybrid_retrieval_evaluation"
 
     evaluate_namespace(
         namespace="fused",

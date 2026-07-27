@@ -4,7 +4,17 @@ Version: 0.1.0
 Summary: RAG-powered Bug Pattern Profiler
 Requires-Python: >=3.11
 Requires-Dist: pydantic>=2.7
+Requires-Dist: pydantic-settings>=2.0
 Requires-Dist: httpx>=0.27
 Requires-Dist: tenacity>=8.2
 Requires-Dist: python-dotenv>=1.0
+Requires-Dist: numpy
+Requires-Dist: rapidfuzz
 Requires-Dist: pytest>=8.0
+Requires-Dist: pinecone>=5.0
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: requests
+Requires-Dist: sentence-transformers>=3.0
+Requires-Dist: torch
+Requires-Dist: groq

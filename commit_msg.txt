@@ -1,9 +1,11 @@
-﻿feat: add metadata-aware vulnerability retrieval evaluation
+﻿feat: add reranked multi-source RAG API
 
-- add query normalization and entity extraction for CVE, CWE, date, vendor, and product inputs
-- apply CVE and CWE metadata filters to Pinecone retrieval
-- add vendor/product vocabulary resolution and local metadata helpers
-- add NVD and fused-corpus retrieval benchmarks, metrics, reports, and metadata profiling
-- add scripts for evaluation and corpus vocabulary inspection
-- refresh README with current architecture, usage, limitations, and evaluation workflow
-- remove obsolete project and environment-template files
+- add BGE cross-encoder reranking to retrieval results
+- merge NVD and fused namespace candidates by CVE before final ranking
+- use multi-source reranked retrieval in the RAG service
+- add FastAPI health and chat endpoints with request/response schemas
+- migrate settings loading to pydantic-settings and .env support
+- declare retrieval, API, embedding, and reranking dependencies
+- refresh retrieval evaluation reports for reranker experiments
+- update README with the architecture, API startup command, and latest metrics
+- remove the obsolete commit message file
