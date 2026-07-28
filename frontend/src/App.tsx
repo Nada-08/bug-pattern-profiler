@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { AlertCircle, ArrowRight, Shield } from "lucide-react";
+import { v4 as uuidv4 } from "uuid";
+
 import { Sidebar } from "./components/sidebar/Sidebar";
 import { ChatInput } from "./components/chat/ChatInput";
 import { LoadingState } from "./components/chat/LoadingState";
@@ -14,7 +16,7 @@ export default function App() {
   useEffect(() => {
     bottom.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading, error]);
-  const ask = async (query: string) => { setError(null); setLastQuery(query); setMessages(old => [...old, { id: crypto.randomUUID(), role: "user", content: query }]); setLoading(true); try { const response = await sendChat(query); setMessages(old => [...old, { id: crypto.randomUUID(), role: "assistant", response }]); } catch (e) { setError(e instanceof Error ? e.message : "Unable to connect to the cybersecurity assistant."); } finally { setLoading(false); } };
+  const ask = async (query: string) => { setError(null); setLastQuery(query); setMessages(old => [...old, { id: uuidv4(), role: "user", content: query }]); setLoading(true); try { const response = await sendChat(query); setMessages(old => [...old, { id: uuidv4(), role: "assistant", response }]); } catch (e) { setError(e instanceof Error ? e.message : "Unable to connect to the cybersecurity assistant."); } finally { setLoading(false); } };
   const fresh = () => { setMessages([]); setError(null); setLastQuery(""); };
   const welcome = messages.length === 0;
   return <div className="flex h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top,_#14213b_0%,_#0B1220_46%)]"><Sidebar collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} onNewChat={fresh} />
